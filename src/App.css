@@ -25,6 +25,7 @@
 	transform: perspective(200px) rotateX(66deg);
 	animation: spinner-wiggle 1.2s infinite;
 }
+
 .spinner:before,
 .spinner:after {
 	content: '';
