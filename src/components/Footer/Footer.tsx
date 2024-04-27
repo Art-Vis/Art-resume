@@ -1,8 +1,4 @@
 import './Footer.css';
-import SvgTg from '/tg-svg.svg';
-import SvgInst from '/inst-svg.svg';
-import SvgMail from '/svg-mail.svg';
-import SvgGitHubb from '/svg-github.svg';
 
 export const Footer = () => {
 	return (
