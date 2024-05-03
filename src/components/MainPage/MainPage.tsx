@@ -14,31 +14,29 @@ export const MainPage = () => {
 	}
 
 	return (
-		<main className='main'>
-			<div className='main__container'>
-				<div className='card'>
-					<span className='pro'>PRO</span>
-					<img className='round' src={user.img} alt='user' />
-					<h3>{user.fullName}</h3>
-					<h6>{user.city}</h6>
-					<p>{user.work}</p>
-					<div className='buttons'>
-						<button className='primary'>Message</button>
-						<button className='primary ghost'>Following</button>
-					</div>
-					<div className='skills'>
-						<h6>Skills</h6>
-						<ul>
-							{userSkills.map(({ title }, index) => (
-								<li key={index}>{title}</li>
-							))}
-						</ul>
-					</div>
+		<div className='main__container'>
+			<div className='card'>
+				<span className='pro'>PRO</span>
+				<img className='round' src={user.img} alt='user' />
+				<h3>{user.fullName}</h3>
+				<h6>{user.city}</h6>
+				<p>{user.work}</p>
+				<div className='buttons'>
+					<button className='primary'>Message</button>
+					<button className='primary ghost'>Following</button>
 				</div>
-				<div className='main__bio'>
-					<p>{user.bio}</p>
+				<div className='skills'>
+					<h6>Skills</h6>
+					<ul>
+						{userSkills.map(({ title }, index) => (
+							<li key={index}>{title}</li>
+						))}
+					</ul>
 				</div>
 			</div>
-		</main>
+			<div className='main__bio'>
+				<p>{user.biography}</p>
+			</div>
+		</div>
 	);
 };

@@ -35,12 +35,12 @@ nav {
 }
 
 .menu {
-	position: fixed;
+	position: absolute;
 	width: 250px;
 	height: calc(100vh - 90px);
 	backdrop-filter: blur(1px);
 	background-color: transparent;
-	padding: 150px 10px;
+	padding: 150px 40px;
 	top: 0;
 	right: 0;
 	height: 100%;
@@ -60,6 +60,7 @@ nav {
 	flex-direction: column;
 	gap: 80px;
 	z-index: 3;
+	align-items: end;
 }
 
 .item {
@@ -102,6 +103,7 @@ nav {
 	}
 
 	.menu {
+		position: fixed;
 		width: 100%;
 		background-color: darkcyan;
 	}

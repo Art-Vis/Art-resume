@@ -1,5 +1,12 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Header, MainPage, Footer } from './components';
+import {
+	HeaderPage,
+	MainPage,
+	FooterPage,
+	Skills,
+	Projects,
+} from './components';
 import { Star } from './components/Star/Star';
 import { USER } from './data/user';
 
@@ -11,12 +18,25 @@ function App() {
 	}
 
 	return (
-		<>
+		<BrowserRouter>
 			<Star />
-			<Header />
-			<MainPage />
-			<Footer />
-		</>
+
+			<header className='header'>
+				<HeaderPage />
+			</header>
+
+			<main className='main'>
+				<Routes>
+					<Route path='/' element={<MainPage />} />
+					<Route path='/skills' element={<Skills />} />
+					<Route path='/projects' element={<Projects />} />
+				</Routes>
+			</main>
+
+			<footer className='footer'>
+				<FooterPage />
+			</footer>
+		</BrowserRouter>
 	);
 }
 

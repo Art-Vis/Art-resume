@@ -10,6 +10,31 @@
 	flex-direction: column;
 }
 
+/* -----HEADER----- */
+
+.header {
+	padding: 25px 0;
+	z-index: 2;
+}
+
+/* -----MAIN----- */
+
+.main {
+	color: #f17909;
+	flex-grow: 1;
+	padding: 25px 0;
+	z-index: 1;
+}
+
+/* -----FOOTER----- */
+
+.footer {
+	padding: 25px 0;
+	z-index: 1;
+}
+
+/* -----SPINNER----- */
+
 .spinner {
 	position: fixed;
 	inset: 0;

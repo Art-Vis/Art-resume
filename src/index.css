@@ -41,6 +41,8 @@ p {
 
 ul,
 ol {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
@@ -62,4 +64,24 @@ button:hover {
 button:focus,
 button:focus-visible {
 	outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Общие стили для полосы прокрутки */
+::-webkit-scrollbar {
+	width: 10px; /* Ширина полосы */
+}
+
+/* Стили для трека (фона) */
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Стили для полосы прокрутки */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Стили при наведении на полосу прокрутки */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }

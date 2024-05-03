@@ -1,3 +1,5 @@
-export { Header } from './Header/Header';
+export { HeaderPage } from './HeaderPage/HeaderPage';
 export { MainPage } from './MainPage/MainPage';
-export { Footer } from './Footer/Footer';
+export { FooterPage } from './FooterPage/FooterPage';
+export { Skills } from './MainPage/Skills/Skills';
+export { Projects } from './MainPage/Projects/Projects';

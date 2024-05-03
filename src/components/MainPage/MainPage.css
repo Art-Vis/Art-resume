@@ -1,4 +1,7 @@
 .main {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 	color: #f17909;
 	flex-grow: 1;
 	padding: 25px 0;

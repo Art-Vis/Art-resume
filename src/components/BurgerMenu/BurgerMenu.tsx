@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './BurgerMenu.css';
+import { Link } from 'react-router-dom';
 
 export const BurgerMenu = () => {
 	const [burgerClass, setBurgerClass] = useState('burger-bar unclicked');
@@ -30,16 +31,10 @@ export const BurgerMenu = () => {
 			<div className={menuClass}>
 				<ul className='list__items'>
 					<li className='item'>
-						<a href=''>Skills</a>
+						<Link to={'/skills'}>Навыки</Link>
 					</li>
 					<li className='item'>
-						<a href=''>Bio</a>
-					</li>
-					<li className='item'>
-						<a href=''>Projects</a>
-					</li>
-					<li className='item'>
-						<a href=''>Contacts</a>
+						<Link to={'/projects'}>Проекты</Link>
 					</li>
 				</ul>
 			</div>
