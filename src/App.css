@@ -10,6 +10,17 @@
 	flex-direction: column;
 }
 
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.title {
+	color: #3beff5;
+}
+
 /* -----HEADER----- */
 
 .header {
@@ -31,6 +42,15 @@
 .footer {
 	padding: 25px 0;
 	z-index: 1;
+}
+
+/* -----UL/LI----- */
+
+.list {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 
 /* -----SPINNER----- */
@@ -69,11 +89,11 @@
 }
 
 .spinner:before {
-	border-top-color: #f01717;
+	border-top-color: #c9c9c9;
 }
 
 .spinner:after {
-	border-top-color: #1d20f5;
+	border-top-color: #3beff5;
 	animation-delay: 0.3s;
 }
 

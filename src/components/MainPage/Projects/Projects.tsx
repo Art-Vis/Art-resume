@@ -1,15 +1,15 @@
 import { USER } from '../../../data/user';
 import './Projects.css';
 
-export const Projects = () => {
+const Projects = () => {
 	const userProjects = USER.project;
 
 	return (
-		<>
-			<h1>Проекты</h1>
-			<ul className='skills__list'>
+		<div className='container'>
+			<h1 className='title'>Проекты</h1>
+			<ul className='list'>
 				{userProjects.map(({ src, title, description }, index) => (
-					<li className='skill__item project' key={index}>
+					<li className='list__item--project' key={index}>
 						<iframe width={400} height={400} src={src} frameBorder='0'></iframe>
 						<h3>
 							<a href={src}>{title}</a>
@@ -18,6 +18,8 @@ export const Projects = () => {
 					</li>
 				))}
 			</ul>
-		</>
+		</div>
 	);
 };
+
+export default Projects;

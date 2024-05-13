@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
 import './HeaderPage.css';
 
-export const HeaderPage = () => {
+const HeaderPage = () => {
 	return (
 		<div className='header__block'>
 			<Link to={'/'}>
@@ -12,3 +12,5 @@ export const HeaderPage = () => {
 		</div>
 	);
 };
+
+export default HeaderPage;

@@ -1,41 +1,34 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import {
-	HeaderPage,
-	MainPage,
-	FooterPage,
-	Skills,
-	Projects,
-} from './components';
 import { Star } from './components/Star/Star';
-import { USER } from './data/user';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+const LazyHeaderPage = lazy(() => import('./components/HeaderPage/HeaderPage'));
+const LazyMainPage = lazy(() => import('./components/MainPage/MainPage'));
+const LazySkills = lazy(() => import('./components/MainPage/Skills/Skills'));
+const LazyProject = lazy(
+	() => import('./components/MainPage/Projects/Projects')
+);
+const LazyFooterPage = lazy(() => import('./components/FooterPage/FooterPage'));
 
 function App() {
-	const user = USER;
-
-	if (!user) {
-		return <div className='spinner'></div>;
-	}
-
 	return (
 		<BrowserRouter>
 			<Star />
-
-			<header className='header'>
-				<HeaderPage />
-			</header>
-
-			<main className='main'>
-				<Routes>
-					<Route path='/' element={<MainPage />} />
-					<Route path='/skills' element={<Skills />} />
-					<Route path='/projects' element={<Projects />} />
-				</Routes>
-			</main>
-
-			<footer className='footer'>
-				<FooterPage />
-			</footer>
+			<Suspense fallback={<div className='spinner'></div>}>
+				<header className='header'>
+					<LazyHeaderPage />
+				</header>
+				<main className='main'>
+					<Routes>
+						<Route path='/' element={<LazyMainPage />} />
+						<Route path='/skills' element={<LazySkills />} />
+						<Route path='/projects' element={<LazyProject />} />
+					</Routes>
+				</main>
+				<footer className='footer'>
+					<LazyFooterPage />
+				</footer>
+			</Suspense>
 		</BrowserRouter>
 	);
 }

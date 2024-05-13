@@ -1,20 +1,20 @@
 import { USER } from '../../data/user';
 import './MainPage.css';
 
-export const MainPage = () => {
+const MainPage = () => {
 	const user = USER;
 	const userSkills = USER.skills;
 
 	if (!user) {
 		<main className='main'>
-			<div className='main__container'>
+			<div className='container'>
 				<h1>no Info</h1>
 			</div>
 		</main>;
 	}
 
 	return (
-		<div className='main__container'>
+		<div className='container'>
 			<div className='card'>
 				<span className='pro'>PRO</span>
 				<img className='round' src={user.img} alt='user' />
@@ -40,3 +40,5 @@ export const MainPage = () => {
 		</div>
 	);
 };
+
+export default MainPage;

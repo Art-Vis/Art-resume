@@ -8,14 +8,6 @@
 	z-index: 1;
 }
 
-.main__container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
-}
-
 .main__bio {
 	max-width: calc(100% - 20%);
 	width: 100%;

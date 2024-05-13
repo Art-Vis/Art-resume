@@ -1,6 +1,6 @@
 import './FooterPage.css';
 
-export const FooterPage = () => {
+const FooterPage = () => {
 	return (
 		<div className='footer__block'>
 			<h3>Контакты</h3>
@@ -73,3 +73,5 @@ export const FooterPage = () => {
 		</div>
 	);
 };
+
+export default FooterPage;

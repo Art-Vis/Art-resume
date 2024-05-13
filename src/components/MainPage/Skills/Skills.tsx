@@ -1,14 +1,14 @@
 import './Skills.css';
 import { USER } from '../../../data/user';
 
-export const Skills = () => {
+const Skills = () => {
 	const skills = USER.skills;
 	return (
-		<div className='skills__container'>
-			<h1>Навыки</h1>
-			<ul className='skills__list'>
+		<div className='container'>
+			<h1 className='title'>Навыки</h1>
+			<ul className='list'>
 				{skills.map(({ title, info }, index) => (
-					<li className='skill__item card' key={index}>
+					<li className='list__item--card' key={index}>
 						<h3>{title}</h3>
 						<p>{info}</p>
 					</li>
@@ -17,3 +17,5 @@ export const Skills = () => {
 		</div>
 	);
 };
+
+export default Skills;

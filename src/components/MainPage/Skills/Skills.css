@@ -1,18 +1,4 @@
-.skills__container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 20px;
-}
-
-.skills__list {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 20px;
-}
-
-.card {
+.list__item--card {
 	display: flex;
 	position: relative;
 	flex-direction: column;

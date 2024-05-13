@@ -1,4 +1,4 @@
-.project {
+.list__item--project {
 	display: flex;
 	position: relative;
 	flex-direction: column;

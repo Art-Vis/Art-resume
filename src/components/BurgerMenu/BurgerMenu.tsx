@@ -37,6 +37,11 @@ export const BurgerMenu = () => {
 			<div className={menuClass}>
 				<ul className='list__items'>
 					<li className='item'>
+						<Link to={'/'} onClick={closeMenu}>
+							Главная
+						</Link>
+					</li>
+					<li className='item'>
 						<Link to={'/skills'} onClick={closeMenu}>
 							Навыки
 						</Link>
