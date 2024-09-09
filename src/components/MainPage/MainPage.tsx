@@ -16,7 +16,6 @@ const MainPage = () => {
 	return (
 		<div className='container'>
 			<div className='card'>
-				<span className='pro'>PRO</span>
 				<img className='round' src={user.img} alt='user' />
 				<h3>{user.fullName}</h3>
 				<h6>{user.city}</h6>

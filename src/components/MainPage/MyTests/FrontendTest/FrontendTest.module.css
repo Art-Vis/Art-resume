@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.title {
+	color: #3beff5;
+	font-size: 28px;
+}
+
+.currentQuestion {
+	color: #4a5fc1;
+}

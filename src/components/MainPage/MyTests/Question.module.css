@@ -1,0 +1,33 @@
+.wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.subtitle {
+	color: #4a5fc1;
+}
+
+.answers {
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.answerButton {
+	max-width: 500px;
+	width: 100%;
+	border: 2px solid #4a5fc1;
+	background-color: inherit;
+	color: white;
+	padding: 10px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.answerButton:hover {
+	border-color: #6a84f5;
+}

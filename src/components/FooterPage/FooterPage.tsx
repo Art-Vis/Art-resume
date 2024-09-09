@@ -1,11 +1,11 @@
-import './FooterPage.css';
+import style from './FooterPage.module.css';
 
 const FooterPage = () => {
 	return (
-		<div className='footer__block'>
+		<div className={style.footer__block}>
 			<h3>Контакты</h3>
-			<div className='footer__block--link'>
-				<a href='https://t.me/ArtVis9' className='footer__link'>
+			<div className={style.footer__links}>
+				<a href='https://t.me/ArtVis9' className={style.footer__link}>
 					<svg
 						width='800px'
 						height='800px'
@@ -19,7 +19,10 @@ const FooterPage = () => {
 						></path>
 					</svg>
 				</a>
-				<a href='https://www.instagram.com/artyom_vis' className='footer__link'>
+				<a
+					href='https://www.instagram.com/artyom_vis'
+					className={style.footer__link}
+				>
 					<svg
 						height='800px'
 						width='800px'
@@ -43,7 +46,7 @@ const FooterPage = () => {
 						/>
 					</svg>
 				</a>
-				<a href='mailto:artyom0698@bk.ru' className='footer__link'>
+				<a href='mailto:artyom0698@bk.ru' className={style.footer__link}>
 					<svg
 						id='Layer_1'
 						viewBox='0 0 512 512'
@@ -56,7 +59,7 @@ const FooterPage = () => {
 						></path>
 					</svg>
 				</a>
-				<a href='https://github.com/Art-Vis' className='footer__link'>
+				<a href='https://github.com/Art-Vis' className={style.footer__link}>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						viewBox='0 0 60 60'
