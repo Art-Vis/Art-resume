@@ -25,7 +25,7 @@ const MainPage = () => {
 					<button className='primary ghost'>Following</button>
 				</div>
 				<div className='skills'>
-					<h6>Skills</h6>
+					<h6>Навыки</h6>
 					<ul>
 						{userSkills.map(({ title }, index) => (
 							<li key={index}>{title}</li>
