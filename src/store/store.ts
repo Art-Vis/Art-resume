@@ -4,8 +4,8 @@ import menuReducer from './slices/menuSlices';
 
 const store = configureStore({
 	reducer: {
+		burger: menuReducer,
 		question: questionReducer,
-		menu: menuReducer,
 	},
 });
 

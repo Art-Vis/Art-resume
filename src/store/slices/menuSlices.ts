@@ -4,12 +4,14 @@ interface BurgerState {
 	burgerClass: string;
 	menuClass: string;
 	isMenuClicked: boolean;
+	isMenuOpen: boolean;
 }
 
 const initialState: BurgerState = {
 	burgerClass: 'burger-bar unclicked',
 	menuClass: 'menu hidden',
 	isMenuClicked: false,
+	isMenuOpen: false,
 };
 
 const menuSlice = createSlice({
@@ -17,22 +19,16 @@ const menuSlice = createSlice({
 	initialState,
 	reducers: {
 		openMenu: state => {
-			if (!state.isMenuClicked) {
-				state.burgerClass = 'burger-bar clicked';
-				state.menuClass = 'menu visible';
-			} else {
-				state.burgerClass = 'burger-bar unclicked';
-				state.menuClass = 'menu hidden';
-			}
-			state.isMenuClicked = !state.isMenuClicked;
+			state.isMenuOpen = true; // Устанавливаем меню в открытое состояние
 		},
 		closeMenu: state => {
-			state.burgerClass = 'burger-bar unclicked';
-			state.menuClass = 'menu hidden';
-			state.isMenuClicked = false;
+			state.isMenuOpen = false; // Устанавливаем меню в закрытое состояние
+		},
+		toggleMenu: state => {
+			state.isMenuOpen = !state.isMenuOpen; // Переключаем состояние меню
 		},
 	},
 });
 
-export const { openMenu, closeMenu } = menuSlice.actions;
+export const { openMenu, closeMenu, toggleMenu } = menuSlice.actions;
 export default menuSlice.reducer;

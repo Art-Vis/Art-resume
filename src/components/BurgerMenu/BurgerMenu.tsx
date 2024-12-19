@@ -1,57 +1,67 @@
 import { Link } from 'react-router-dom';
-import './BurgerMenu.css';
+import './BurgerMenu.scss';
 import { useDispatch, useSelector } from 'react-redux';
+import { closeMenu, toggleMenu } from '../../store/slices/menuSlices';
 import { RootState } from '../../store/store';
-import { openMenu, closeMenu } from '../../store/slices/menuSlices';
 
 export const BurgerMenu = () => {
-	const burgerClass = useSelector((state: RootState) => state.menu.burgerClass);
-	const menuClass = useSelector((state: RootState) => state.menu.menuClass);
-
 	const dispatch = useDispatch();
+	const isMenuOpen = useSelector((state: RootState) => state.burger.isMenuOpen);
 
-	const updateOpenMenu = () => {
-		dispatch(openMenu());
+	const handleToggleClick = () => {
+		dispatch(toggleMenu()); // Переключение состояния меню
 	};
 
-	const updateCloseMenu = () => {
-		dispatch(closeMenu());
+	const handleMenuClick = () => {
+		dispatch(closeMenu()); // Закрытие меню при клике на ссылку
 	};
 
 	return (
-		<div className={'burger'}>
-			<nav>
-				<div className='burger-menu' onClick={updateOpenMenu}>
-					<div className={burgerClass}></div>
-					<div className={burgerClass}></div>
-					<div className={burgerClass}></div>
-				</div>
-			</nav>
-
-			<div className={menuClass}>
-				<ul className='list__items'>
-					<li className='item'>
-						<Link to={'/'} onClick={updateCloseMenu}>
-							Главная
+		<div className='burger'>
+			<div
+				className={`burger__wrapp ${isMenuOpen ? 'active' : ''}`}
+				onClick={handleToggleClick}
+			>
+				<span className='burger__wrapp-bar'></span>
+				<span className='burger__wrapp-bar'></span>
+				<span className='burger__wrapp-bar'></span>
+			</div>
+			<nav className={`menu ${isMenuOpen ? 'active' : ''}`}>
+				<ul className='menu__list'>
+					<li className='menu__item'>
+						<Link to={'/'} className='menu__link' onClick={handleMenuClick}>
+							🚀 Главная
 						</Link>
 					</li>
-					<li className='item'>
-						<Link to={'/skills'} onClick={updateCloseMenu}>
-							Навыки
+					<li className='menu__item'>
+						<Link
+							to={'/skills'}
+							className='menu__link'
+							onClick={handleMenuClick}
+						>
+							✨ Навыки
 						</Link>
 					</li>
-					<li className='item'>
-						<Link to={'/projects'} onClick={updateCloseMenu}>
-							Проекты
+					<li className='menu__item'>
+						<Link
+							to={'/projects'}
+							className='menu__link'
+							onClick={handleMenuClick}
+						>
+							🌌 Проекты
 						</Link>
 					</li>
-					<li className='item'>
-						<Link to={'/my-tests'} onClick={updateCloseMenu}>
-							Тесты
+					<li className='menu__item'>
+						<Link
+							to={'/my-tests'}
+							className='menu__link'
+							onClick={handleMenuClick}
+						>
+							🪐 Тесты
 						</Link>
 					</li>
 				</ul>
-			</div>
+			</nav>
 		</div>
 	);
 };

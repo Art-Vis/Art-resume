@@ -22,7 +22,12 @@ a {
 body {
 	margin: 0;
 	min-width: 320px;
-	background: radial-gradient(rgb(31, 58, 71), rgb(11, 17, 20));
+	background: radial-gradient(
+		circle at center,
+		rgba(0, 0, 0, 1),
+		rgba(0, 0, 0, 0.8),
+		#2c003e 90%
+	);
 }
 
 h1 {
