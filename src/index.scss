@@ -1,0 +1,90 @@
+@font-face {
+	font-family: 'Poppins';
+	font-weight: 300;
+	src: url('./assets/fonts/Poppins-Light.woff2'),
+		url('./assets/fonts/Poppins-Light.woff');
+}
+@font-face {
+	font-family: 'Poppins';
+	font-weight: 400;
+	src: url('./assets/fonts/Poppins-Regular.woff2'),
+		url('./assets/fonts/Poppins-Regular.woff');
+}
+@font-face {
+	font-family: 'Poppins';
+	font-weight: 500;
+	src: url('./assets/fonts/Poppins-Medium.woff2'),
+		url('./assets/fonts/Poppins-Medium.woff');
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	background-color: #1a1a1d;
+	color: white;
+	font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.white {
+	background-color: #adadad;
+	color: black;
+}
+
+h1 {
+	font-size: 3.2em;
+	line-height: 1.1;
+	margin: 0;
+}
+
+a {
+	font-weight: 500;
+	color: inherit;
+	text-decoration: inherit;
+}
+
+p {
+	font-size: 14px;
+	line-height: 21px;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	color: inherit;
+}
+
+/* Общие стили для полосы прокрутки */
+::-webkit-scrollbar {
+	width: 10px; /* Ширина полосы */
+}
+
+/* Стили для трека (фона) */
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Стили для полосы прокрутки */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Стили при наведении на полосу прокрутки */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

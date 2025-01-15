@@ -3,7 +3,7 @@ import { IUser } from './interface';
 export const USER: IUser = {
 	id: 0,
 	email: 'artyom0698@bk.ru',
-	fullName: 'Артём Вишневецкий',
+	fullName: 'Вишневецкий Артём',
 	city: 'Санкт-Петербург',
 	work: 'Frontend developer',
 	img: '/im.jpg',

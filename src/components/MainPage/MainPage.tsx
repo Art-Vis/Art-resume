@@ -1,39 +1,25 @@
 import { USER } from '../../data/user';
-import './MainPage.css';
+import Contacts from './Contacts/Contacts';
+import './MainPage.scss';
 
 const MainPage = () => {
 	const user = USER;
-	const userSkills = USER.skills;
 
 	if (!user) {
-		<main className='main'>
-			<div className='container'>
-				<h1>no Info</h1>
-			</div>
-		</main>;
+		<div className='container'>
+			<h1>no Info</h1>
+		</div>;
 	}
 
 	return (
-		<div className='container'>
+		<div className='container main-container'>
 			<div className='card'>
-				<img className='round' src={user.img} alt='user' />
-				<h3>{user.fullName}</h3>
-				<h6>{user.city}</h6>
-				<p>{user.work}</p>
-				<div className='buttons'>
-					<button className='primary'>Message</button>
-					<button className='primary ghost'>Following</button>
-				</div>
-				<div className='skills'>
-					<h6>Навыки</h6>
-					<ul>
-						{userSkills.map(({ title }, index) => (
-							<li key={index}>{title}</li>
-						))}
-					</ul>
-				</div>
+				<img className='card__img' src={user.img} alt='user' />
+				<h3 className='card__fullname'>{user.fullName}</h3>
+				<p className='card__work'>{user.work}</p>
+				<Contacts />
 			</div>
-			<div className='main__bio'>
+			<div className='biography'>
 				<p>{user.biography}</p>
 			</div>
 		</div>

@@ -1,0 +1,83 @@
+.switch {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: 10px;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: absolute;
+	z-index: 3;
+	right: 30px;
+	top: 30px;
+
+	& .icon {
+		display: block;
+		width: 25px;
+		height: 25px;
+		background-size: cover;
+	}
+
+	& .sun {
+		background-image: url('/src/assets/sun-light.svg');
+	}
+
+	& .moon {
+		background-image: url('/src/assets/moon-light.svg');
+	}
+
+	& .sun.black {
+		background-image: url('/src/assets/sun-night.svg');
+	}
+
+	& .moon.black {
+		background-image: url('/src/assets/moon-night.svg');
+	}
+
+	& .toggle-wrapper {
+		display: flex;
+		position: relative;
+		z-index: 2;
+		cursor: pointer;
+
+		#switch {
+			height: 0;
+			width: 0;
+			visibility: hidden;
+			position: absolute;
+		}
+
+		#toggle {
+			cursor: pointer;
+			width: 45px;
+			height: 25px;
+			background: grey;
+			display: block;
+			border-radius: 100px;
+			position: relative;
+
+			&::before {
+				transition: all 0.2s ease-in-out;
+				content: '';
+				position: absolute;
+				top: 3px;
+				left: 3px;
+				width: 19px;
+				height: 19px;
+				background: #fff;
+				border-radius: 100%;
+			}
+		}
+		#switch:checked + #toggle {
+			background: #4e4e50; // Цвет для включенного состояния
+		}
+
+		#switch:checked + #toggle::before {
+			transform: translateX(20px);
+			background: #fff; // Цвет "ползунка" в активном состоянии
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.spot-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	pointer-events: none;
+
+	& .spot {
+		position: absolute;
+		width: 400px;
+		height: 400px;
+		background: radial-gradient(circle, #4e4e50 20%, #1a1a1d 80%);
+		border-radius: 50%;
+		pointer-events: none;
+		opacity: 0.1;
+		transform: translate(-50%, -50%);
+		box-shadow: 0 0 300px 0 rgba(26, 26, 29, 0.1);
+	}
+}
+
+body.white {
+	& .spot-container {
+		& .spot {
+			background: radial-gradient(circle, #4e4e50 20%, #adadad 85%);
+			box-shadow: 0 0 300px 0 rgba(0, 0, 0, 0.1);
+		}
+	}
+}

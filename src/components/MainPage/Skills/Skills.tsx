@@ -1,4 +1,4 @@
-import './Skills.css';
+import './Skills.scss';
 import { USER } from '../../../data/user';
 
 const Skills = () => {
