@@ -1,13 +1,10 @@
 import { FC, useEffect, useState } from 'react';
 import './Spot.scss';
 
-const Spot = () => {
+const Spot: FC = () => {
 	const [spotPosition, setSpotPosition] = useState({ x: 0, y: 0 });
 
 	const handleMouseMove = (event: MouseEvent) => {
-		const windowWidth = window.innerWidth;
-		const windowHeight = window.innerHeight;
-
 		// Координаты пятна на основе положения курсора
 		let x = event.clientX;
 		let y = event.clientY;
