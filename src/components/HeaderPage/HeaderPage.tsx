@@ -12,35 +12,37 @@ const HeaderPage = () => {
 	};
 
 	return (
-		<nav className='header__menu'>
-			<ul className='header__menu-list'>
-				<li className='header__menu-item'>
-					<Link
-						to={'/'}
-						className='header__menu-link'
-						onClick={updateCloseMenu}
-					>
-						Главная
-					</Link>
-				</li>
-				<li className='header__menu-item'>
-					<Link to={'/skills'} className='header__menu-link'>
-						Навыки
-					</Link>
-				</li>
-				<li className='header__menu-item'>
-					<Link to={'/projects'} className='header__menu-link'>
-						Проекты
-					</Link>
-				</li>
-				<li className='header__menu-item'>
-					<Link to={'/my-tests'} className='header__menu-link'>
-						Тесты
-					</Link>
-				</li>
-			</ul>
-			{/* <BurgerMenu /> */}
-		</nav>
+		<header className='header'>
+			<nav className='header__menu'>
+				<ul className='header__menu-list'>
+					<li className='header__menu-item'>
+						<Link
+							to={'/'}
+							className='header__menu-link'
+							onClick={updateCloseMenu}
+						>
+							Главная
+						</Link>
+					</li>
+					<li className='header__menu-item'>
+						<Link to={'/skills'} className='header__menu-link'>
+							Навыки
+						</Link>
+					</li>
+					<li className='header__menu-item'>
+						<Link to={'/projects'} className='header__menu-link'>
+							Проекты
+						</Link>
+					</li>
+					<li className='header__menu-item'>
+						<Link to={'/my-tests'} className='header__menu-link'>
+							Тесты
+						</Link>
+					</li>
+				</ul>
+				{/* <BurgerMenu /> */}
+			</nav>
+		</header>
 	);
 };
 
