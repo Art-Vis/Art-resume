@@ -1,9 +1,14 @@
+@import '../../../styles/variables.scss';
+
 .card {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: start;
 	gap: 25px;
+	z-index: 1000;
+	max-width: 500px;
+	width: 100%;
 
 	& .card__img {
 		max-width: 150px;
@@ -11,8 +16,16 @@
 	}
 
 	& .card__fullname {
-		font-size: 48px;
+		font-size: $fs-fullname-descktop;
 		font-weight: 400;
+
+		@media (max-width: 768px) {
+			font-size: $fs-fullname-tab;
+		}
+
+		@media (max-width: 480px) {
+			font-size: $fs-fullname-mobile;
+		}
 	}
 
 	& .card__work {
@@ -23,13 +36,13 @@
 }
 
 .biography {
-	max-width: 40%;
+	max-width: 50%;
 
-	& > p {
+	& .biography__item {
 		opacity: 0.5;
 		line-height: 1.5;
 		text-align: start;
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: 400;
 	}
 }

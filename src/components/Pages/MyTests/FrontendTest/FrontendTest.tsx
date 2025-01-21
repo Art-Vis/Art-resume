@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { questionsFrontend } from '../../../../data/question';
-import Question from '../Question';
-import styles from './FrontendTest.module.css';
+import Question from '../Question/Question';
+import './FrontendTest.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../../store/store';
 import { nextQuestion } from '../../../../store/slices/questionSlices';
@@ -24,8 +24,8 @@ const InterviewTest: FC = () => {
 		}
 	};
 	return (
-		<div className={styles.container}>
-			<h1 className={styles.title}>Frontend</h1>
+		<div className='test'>
+			<h1 className='test__title'>Frontend</h1>
 			{!isTestComplete ? (
 				<Question
 					question={questionsFrontend[currentQuestionIndex].question}
@@ -36,7 +36,7 @@ const InterviewTest: FC = () => {
 			) : (
 				<h2>Тест завершен, отличная работа!</h2>
 			)}
-			<div className={styles.currentQuestion}>
+			<div className='test__current-question'>
 				{currentQuestionIndex + 1}/{questionsFrontend.length}
 			</div>
 		</div>

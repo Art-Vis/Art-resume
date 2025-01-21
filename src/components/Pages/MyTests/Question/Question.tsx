@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { QuestionProps } from '../../../data/interface';
-import styles from './Question.module.css';
+import './Question.scss';
+import { QuestionProps } from '../../../../data/interface';
 
 const Question: FC<QuestionProps> = ({
 	question,
@@ -14,12 +14,12 @@ const Question: FC<QuestionProps> = ({
 	};
 
 	return (
-		<div className={styles.wrap}>
-			<h2 className={styles.subtitle}>{question}</h2>
-			<div className={styles.answers}>
+		<div className='questions'>
+			<h2 className='questions__subtitle'>{question}</h2>
+			<div className='questions__answers'>
 				{options.map((option, index) => (
 					<button
-						className={styles.answerButton}
+						className='questions__answer-button'
 						key={index}
 						onClick={() => handleAnswerClick(option)}
 					>

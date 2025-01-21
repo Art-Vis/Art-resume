@@ -1,0 +1,85 @@
+@import '../../../styles/variables.scss';
+
+.tests {
+	display: flex;
+	flex-direction: column;
+	gap: $gap-block-descktop;
+
+	@media (max-width: 768px) {
+		gap: $gap-block-tab;
+	}
+
+	@media (max-width: 480px) {
+		gap: $gap-block-mobile;
+	}
+
+	& .tests__title {
+		display: flex;
+		justify-content: center;
+		font-size: $fs-title-descktop;
+
+		@media (max-width: 768px) {
+			font-size: $fs-title-tab;
+		}
+
+		@media (max-width: 480px) {
+			font-size: $fs-title-mobile;
+		}
+	}
+
+	& .tests__cards {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		padding: 10px 0;
+		justify-content: center;
+		align-items: center;
+
+		& .tests__card {
+			display: flex;
+			width: 300px;
+			border-radius: 8px;
+
+			& .tests__card-link {
+				display: flex;
+				flex-direction: column;
+				position: relative;
+				padding: 20px;
+				width: 100%;
+				min-width: 150px;
+				height: 150px;
+				font-size: 30px;
+				justify-content: center;
+				text-align: center;
+				border: 2px solid transparent;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.cardTitle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.frontend {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url('/public/frontend.jpg');
+}
+
+.backend {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('/public/back.jpg');
+}
+
+.fullstack {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('/public/full-stack.png');
+}

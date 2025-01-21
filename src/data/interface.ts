@@ -6,7 +6,7 @@ export interface IUser {
 	work: string;
 	img: string;
 	bio: string;
-	biography: string;
+	biography: string[];
 	skills: { id: number; title: string; info: string }[];
 	project: { src: string; title: string; description: string }[];
 	age: number;

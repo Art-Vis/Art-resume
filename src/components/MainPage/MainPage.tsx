@@ -4,7 +4,9 @@ import AppRoutes from '../AppRoutes/AppRoutes';
 const MainPage: FC = () => {
 	return (
 		<main className='main'>
-			<AppRoutes />
+			<div className='container main-container'>
+				<AppRoutes />
+			</div>
 		</main>
 	);
 };

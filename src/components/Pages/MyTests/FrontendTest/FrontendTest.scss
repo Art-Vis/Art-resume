@@ -1,0 +1,15 @@
+.test {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	& .test__title {
+		display: flex;
+		justify-content: center;
+		font-size: 28px;
+	}
+
+	& .test__current-question {
+		color: #4a5fc1;
+	}
+}
