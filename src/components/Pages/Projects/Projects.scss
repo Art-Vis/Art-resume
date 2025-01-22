@@ -1,29 +1,29 @@
-@import '../../../styles/variables.scss';
+@use '@styles/variables.scss' as style;
 
 .projects {
 	display: flex;
 	flex-direction: column;
-	gap: $gap-block-descktop;
+	gap: style.$gap-block-descktop;
 
 	@media (max-width: 768px) {
-		gap: $gap-block-tab;
+		gap: style.$gap-block-tab;
 	}
 
 	@media (max-width: 480px) {
-		gap: $gap-block-mobile;
+		gap: style.$gap-block-mobile;
 	}
 
 	& .projects__title {
 		display: flex;
 		justify-content: center;
-		font-size: $fs-title-descktop;
+		font-size: style.$fs-title-descktop;
 
 		@media (max-width: 768px) {
-			font-size: $fs-title-tab;
+			font-size: style.$fs-title-tab;
 		}
 
 		@media (max-width: 480px) {
-			font-size: $fs-title-mobile;
+			font-size: style.$fs-title-mobile;
 		}
 	}
 
@@ -38,7 +38,7 @@
 			gap: 10px;
 		}
 
-		& .projects__list-item {
+		& .projects__list-card {
 			display: flex;
 			position: relative;
 			flex-direction: column;

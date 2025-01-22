@@ -33,7 +33,7 @@ const SwitchTheme: FC = () => {
 					id='switch'
 					onClick={() => setIsWhite(prev => !prev)}
 				/>
-				<label htmlFor='switch' id='toggle'></label>
+				<label className='label' htmlFor='switch' id='toggle'></label>
 			</div>
 			<div className={`moon icon ${isWhite ? 'black' : ''}`}></div>
 		</div>

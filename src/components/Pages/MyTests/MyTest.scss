@@ -1,29 +1,29 @@
-@import '../../../styles/variables.scss';
+@use '@styles/variables.scss' as style;
 
 .tests {
 	display: flex;
 	flex-direction: column;
-	gap: $gap-block-descktop;
+	gap: style.$gap-block-descktop;
 
 	@media (max-width: 768px) {
-		gap: $gap-block-tab;
+		gap: style.$gap-block-tab;
 	}
 
 	@media (max-width: 480px) {
-		gap: $gap-block-mobile;
+		gap: style.$gap-block-mobile;
 	}
 
 	& .tests__title {
 		display: flex;
 		justify-content: center;
-		font-size: $fs-title-descktop;
+		font-size: style.$fs-title-descktop;
 
 		@media (max-width: 768px) {
-			font-size: $fs-title-tab;
+			font-size: style.$fs-title-tab;
 		}
 
 		@media (max-width: 480px) {
-			font-size: $fs-title-mobile;
+			font-size: style.$fs-title-mobile;
 		}
 	}
 
@@ -67,19 +67,19 @@
 .frontend {
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-image: url('/public/frontend.jpg');
+	background-image: url('/src/assets/frontend.jpg');
 }
 
 .backend {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: url('/public/back.jpg');
+	background-image: url('/src/assets/back.jpg');
 }
 
 .fullstack {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url('/public/full-stack.png');
+	background-image: url('/src/assets/full-stack.png');
 }

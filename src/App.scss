@@ -1,19 +1,26 @@
+@use '@styles/variables' as style;
+
 #root {
 	min-width: 320px;
 	width: 100%;
 	min-height: 100vh;
-	/* margin: 0 auto; */
-	/* text-align: center; */
-	/* padding: 0 30px; */
-	/* display: flex; */
 	flex-direction: column;
 	position: relative;
 }
 
 .container {
-	gap: 20px;
+	gap: style.$container-padding-descktop;
 	max-width: 1920px;
 	padding: 0 30px;
+
+	@media (max-width: 768px) {
+		padding: style.$container-padding-tab;
+		gap: 10px;
+	}
+
+	@media (max-width: 480px) {
+		padding: style.$container-padding-mobile;
+	}
 }
 
 /* -----HEADER----- */
@@ -27,8 +34,16 @@
 
 .main {
 	flex-grow: 1;
-	padding: 100px 0;
+	padding: style.$section-padding-descktop;
 	z-index: 1;
+
+	@media (max-width: 768px) {
+		padding: style.$section-padding-tab;
+	}
+
+	@media (max-width: 480px) {
+		padding: style.$section-padding-mobile;
+	}
 }
 
 .main-container {
@@ -36,6 +51,11 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: start;
+
+	@media (max-width: 480px) {
+		align-items: center;
+		flex-direction: column;
+	}
 }
 
 /* -----FOOTER----- */

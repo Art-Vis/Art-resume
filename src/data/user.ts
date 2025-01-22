@@ -6,17 +6,16 @@ export const USER: IUser = {
 	fullName: 'Вишневецкий Артём',
 	city: 'Санкт-Петербург',
 	work: 'Frontend developer',
-	img: '/im.jpg',
+	img: './src/assets/im.jpg',
 	bio: 'Привет! Меня зовут Артём, и я фронтенд разработчик с фокусом на создании удивительных пользовательских интерфейсов. Мой опыт включает в себя работу с HTML, CSS, JavaScript, React. Я стремлюсь к тому, чтобы каждый проект, над которым я работаю, был не только функциональным, но и красивым. Готов внести свой вклад в ваш следующий проект и принести к нему свежие идеи и энергию!',
 	biography: [
-		'Я являюсь фронтенд-разработчиком со стажем работы в области веб-разработки 2 года. ',
+		'Frontend-разработчик с 2-летним опытом работы в разработке. ',
 		'Проявил интерес к компьютерам и программированию еще в раннем возрасте. ',
 		'После окончания курсов в 2023, я начал свою карьеру в качестве фронтенд-разработчика. ',
 		'Быстро освоился в этой области благодаря своей страсти к технологиям и творческому подходу к созданию пользовательских интерфейсов. ',
-		'За все время обучения углубил свои знания в HTML, CSS и JavaScript, а также приобрел опыт работы с различными фреймворками и библиотеками, такими как React и Vue.js. ',
+		'За все время обучения углубил свои знания в HTML, CSS, JavaScript и TypeScript а также приобрел опыт работы с различными фреймворками и библиотеками, такими как React и Vue.js. ',
 		'Мой талант в создании эстетически привлекательных и интуитивно понятных интерфейсов. ',
 		'Я активно слежу за новыми технологиями и тенденциями в области веб-разработки, участвую в профессиональных мероприятиях и конференциях, а также принимаю участие в интересных интенсивах. ',
-		'В свободное время занимаюсь физическим развитием, люблю путешествовать и проводить время с семьей и друзьями. ',
 	],
 	skills: [
 		{
@@ -57,65 +56,24 @@ export const USER: IUser = {
 	],
 	project: [
 		{
-			src: 'https://art-vis.github.io/Blanchard/',
-			title: 'Художественная галерея Blanchard',
-			description:
-				'Проект "Художественная галерея Blanchard" был реализован с использованием HTML , CSS и нескольких JS библиотек',
+			title: 'Calculator',
+			description: 'A simple calculator built with JavaScript.',
+			link: 'https://github.com/Art-Vis/Calculator',
 		},
 		{
-			src: 'https://art-vis.github.io/3D-Scroll/',
+			title: 'Pomodoro',
+			description: 'A productivity timer based on the Pomodoro technique.',
+			link: 'https://github.com/Art-Vis/Pomodoro',
+		},
+		{
+			title: 'Currency Converter',
+			description: 'A currency converter app that uses live API data.',
+			link: 'https://github.com/Art-Vis/Currency-Converter',
+		},
+		{
 			title: '3D Scroll',
-			description:
-				'Проект "3D Scroll" был реализован с использованием HTML , CSS и чуть-чуть JS. ',
+			description: 'A unique scroll effect with 3D animations.',
+			link: 'https://github.com/Art-Vis/3D-Scroll',
 		},
-		{
-			src: 'https://art-vis.github.io/burgers/',
-			title: 'Лендинг Burger House',
-			description:
-				'Проект "Burger House" был реализован с использованием фреймворка Angular',
-		},
-		{
-			src: 'https://art-vis.github.io/Brain-cards/',
-			title: 'Brain cards',
-			description: 'Проект "Brain cards" реализован на чистом JS',
-		},
-		{
-			src: 'https://art-vis.github.io/Quiz/',
-			title: 'Квизы',
-			description: 'Проект "Квизы" реализован на чистом JS',
-		},
-		{
-			src: 'https://money-safe-nu.vercel.app/',
-			title: 'Электронный кошелек',
-			description: 'Проект "Электронный кошелек" реализован на чистом JS',
-		},
-		{
-			src: 'https://happy-postcard.vercel.app/',
-			title: 'Сервис открыток',
-			description: 'Проект "Сервис открыток" реализован на чистом JS',
-		},
-		{
-			src: 'https://art-vis.github.io/Game-couples/',
-			title: 'Игра в пары',
-			description: 'Проект "Игра в пары" реализован на чистом JS',
-		},
-		{
-			src: 'https://art-vis.github.io/Currency-Converter/',
-			title: 'Конвертор валют',
-			description:
-				'Проект "Конвертор валют" реализован на чистом JS. В Конверторе всегда актуальный курс валют, данные о валютах приходят с API',
-		},
-		{
-			src: 'https://art-vis.github.io/Chik-chik/',
-			title: 'Парикмахерская',
-			description: 'Проект "Парикмахерская" реализован на чистом JS',
-		},
-		// {
-		// 	src: 'https://art-vis.github.io/Guide-to-St.Petersburg/',
-		// 	title: 'Путеводитель по Санкт-Петербургу',
-		// 	description:
-		// 		'Проект "Путеводитель по Санкт-Петербургу" был реализован с использованием HTML , CSS и нескольких JS библиотек. НЕ адаптивный.',
-		// },
 	],
-	age: 25,
 };

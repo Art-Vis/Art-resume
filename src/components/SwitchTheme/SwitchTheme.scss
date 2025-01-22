@@ -1,3 +1,5 @@
+@use '@styles/variables' as style;
+
 .switch {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -13,6 +15,12 @@
 	z-index: 3;
 	right: 30px;
 	top: 30px;
+
+	@media (max-width: 480px) {
+		top: 70px;
+		right: 50%;
+		transform: translateX(50%);
+	}
 
 	& .icon {
 		display: block;

@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { lazy, Suspense, useState } from 'react';
 import Spot from './components/Spot/Spot';
 import LogoAnimation from './components/LogoAnimation/LogoAnimation';

@@ -8,8 +8,7 @@ export interface IUser {
 	bio: string;
 	biography: string[];
 	skills: { id: number; title: string; info: string }[];
-	project: { src: string; title: string; description: string }[];
-	age: number;
+	project: { link: string; title: string; description: string }[];
 }
 
 export interface QuestionProps {

@@ -9,17 +9,30 @@
 
 	& .header__menu-list {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 30px;
 		width: 100%;
 
+		@media (max-width: 768px) {
+			gap: 10px;
+		}
+
+		@media (max-width: 480px) {
+			gap: 5px;
+		}
+
 		& .header__menu-item {
 			position: relative;
+			padding: 10px 15px;
+
+			@media (max-width: 768px) {
+				padding: 5px;
+			}
 
 			& .header__menu-link {
 				display: flex;
 				flex-direction: column;
 				gap: 3px;
-				padding: 10px 15px;
 				text-decoration: none;
 				font-size: 18px;
 				font-weight: 500;
@@ -27,6 +40,10 @@
 				border: 2px solid transparent;
 				outline: none;
 				transition: color 0.3s, background-color 0.3s;
+
+				@media (max-width: 768px) {
+					font-size: 14px;
+				}
 			}
 
 			& body.white .header__menu-link {

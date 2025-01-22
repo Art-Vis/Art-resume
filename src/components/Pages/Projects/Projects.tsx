@@ -24,10 +24,10 @@ const Projects = () => {
 		<div className='projects'>
 			<h1 className='projects__title'>Проекты</h1>
 			<ul className='projects__list'>
-				{userProjects.map(({ src, title, description }, index) => (
-					<li className='projects__list-item' key={index}>
+				{userProjects.map(({ link, title, description }, index) => (
+					<li className='projects__list-card' key={index}>
 						<h3>
-							<a href={src}>{title}</a>
+							<a href={link}>{title}</a>
 						</h3>
 						<p>{description}</p>
 					</li>
