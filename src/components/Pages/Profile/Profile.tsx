@@ -4,6 +4,7 @@ import Contacts from './Contacts/Contacts';
 import { USER } from '../../../data/user';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import img from '@assets/im.jpg';
 
 const Profile: FC = () => {
 	const user = USER;
@@ -26,7 +27,7 @@ const Profile: FC = () => {
 	return (
 		<>
 			<div className='card'>
-				<img className='card__img' src={user.img} alt='user' />
+				<img className='card__img' src={img} alt='user' />
 				<h3 className='card__fullname'>{user.fullName}</h3>
 				<p className='card__work'>{user.work}</p>
 				<Contacts />
