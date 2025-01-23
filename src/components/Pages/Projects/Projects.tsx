@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { USER } from '../../../data/user';
 import './Projects.scss';
+import ProjectCard from './ProjectCard/ProjectCard';
 
 const Projects = () => {
 	const userProjects = USER.project;
@@ -24,13 +25,8 @@ const Projects = () => {
 		<div className='projects'>
 			<h1 className='projects__title'>Проекты</h1>
 			<ul className='projects__list'>
-				{userProjects.map(({ link, title, description }, index) => (
-					<li className='projects__list-card' key={index}>
-						<h3>
-							<a href={link}>{title}</a>
-						</h3>
-						<p>{description}</p>
-					</li>
+				{userProjects.map((project, index) => (
+					<ProjectCard key={index} project={project} />
 				))}
 			</ul>
 		</div>

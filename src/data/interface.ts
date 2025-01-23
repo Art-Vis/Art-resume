@@ -8,7 +8,13 @@ export interface IUser {
 	bio: string;
 	biography: string[];
 	skills: { id: number; title: string; info: string }[];
-	project: { link: string; title: string; description: string }[];
+	project: {
+		link: string;
+		title: string;
+		description: string;
+		img: string;
+		tech: string[];
+	}[];
 }
 
 export interface QuestionProps {
@@ -22,4 +28,12 @@ export interface QuestionData {
 	question: string;
 	options: string[];
 	correctAnswer: string;
+}
+
+export interface IProject {
+	link: string;
+	title: string;
+	description: string;
+	img: string;
+	tech: string[];
 }

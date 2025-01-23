@@ -56,24 +56,32 @@ export const USER: IUser = {
 	],
 	project: [
 		{
-			title: 'Calculator',
-			description: 'A simple calculator built with JavaScript.',
-			link: 'https://github.com/Art-Vis/Calculator',
-		},
-		{
 			title: 'Pomodoro',
 			description: 'A productivity timer based on the Pomodoro technique.',
 			link: 'https://github.com/Art-Vis/Pomodoro',
+			img: './src/assets/pomodoro1-n.png',
+			tech: ['React', 'React Router', 'ChartJS', 'TypeScript', 'Scss', 'Vite'],
 		},
 		{
 			title: 'Currency Converter',
 			description: 'A currency converter app that uses live API data.',
 			link: 'https://github.com/Art-Vis/Currency-Converter',
+			img: './src/assets/converter1-n.png',
+			tech: ['React', 'React Router', 'ChartJS', 'TypeScript', 'Scss', 'Vite'],
 		},
 		{
 			title: '3D Scroll',
 			description: 'A unique scroll effect with 3D animations.',
-			link: 'https://github.com/Art-Vis/3D-Scroll',
+			link: 'https://art-vis.github.io/3D-Scroll/',
+			img: './src/assets/3d-scroll-n.png',
+			tech: ['React', 'React Router', 'ChartJS', 'TypeScript', 'Scss', 'Vite'],
+		},
+		{
+			title: 'Calculator',
+			description: 'A simple calculator built with JavaScript.',
+			link: 'https://github.com/Art-Vis/Calculator',
+			img: './src/assets/calculate1-n.png',
+			tech: ['React', 'React Router', 'ChartJS', 'TypeScript', 'Scss', 'Vite'],
 		},
 	],
 };

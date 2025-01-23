@@ -1,13 +1,11 @@
 .white {
 	& .contacts {
-		&__link svg {
-			width: 30px;
-			height: 30px;
+		& .contacts__link svg {
 			color: #002366;
 			opacity: 0.5;
 		}
 
-		&__link {
+		& .contacts__link {
 			display: flex;
 			align-items: center;
 			transition: all 0.3s ease-in-out;
@@ -31,7 +29,7 @@
 		grid-column: 1/3;
 	}
 
-	&__links {
+	& .contacts__links {
 		display: flex;
 		justify-content: space-around;
 		gap: 20px;
@@ -43,32 +41,32 @@
 		@media (max-width: 480px) {
 			gap: 6px;
 		}
-	}
 
-	&__link svg {
-		width: 30px;
-		height: 30px;
-		color: gray;
-
-		@media (max-width: 768px) {
-			width: 20px;
-			height: 20px;
+		& .contacts__link svg {
+			width: 30px;
+			height: 30px;
+			color: gray;
 		}
 
-		@media (max-width: 480px) {
-			width: 15px;
-			height: 15px;
-		}
-	}
-
-	&__link {
-		display: flex;
-		align-items: center;
-		transition: all 0.3s ease-in-out;
-
-		:hover {
-			color: white;
+		& .contacts__link {
+			display: flex;
+			align-items: center;
 			transition: all 0.3s ease-in-out;
+
+			:hover {
+				color: white;
+				transition: all 0.3s ease-in-out;
+			}
+
+			@media (max-width: 768px) {
+				width: 20px;
+				height: 20px;
+			}
+
+			@media (max-width: 480px) {
+				width: 15px;
+				height: 15px;
+			}
 		}
 	}
 }

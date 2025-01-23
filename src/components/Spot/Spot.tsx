@@ -5,7 +5,6 @@ const Spot: FC = () => {
 	const [spotPosition, setSpotPosition] = useState({ x: 0, y: 0 });
 
 	const handleMouseMove = (event: MouseEvent) => {
-		// Координаты пятна на основе положения курсора
 		let x = event.clientX;
 		let y = event.clientY;
 
