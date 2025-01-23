@@ -26,7 +26,7 @@ const SwitchTheme: FC = () => {
 
 	return (
 		<div className='switch'>
-			<div className={`sun icon ${isWhite ? 'black' : ''}`}></div>
+			<div className={`moon icon ${isWhite ? 'black' : ''}`}></div>
 			<div className='toggle-wrapper'>
 				<input
 					type='checkbox'
@@ -35,7 +35,7 @@ const SwitchTheme: FC = () => {
 				/>
 				<label className='label' htmlFor='switch' id='toggle'></label>
 			</div>
-			<div className={`moon icon ${isWhite ? 'black' : ''}`}></div>
+			<div className={`sun icon ${isWhite ? 'black' : ''}`}></div>
 		</div>
 	);
 };
