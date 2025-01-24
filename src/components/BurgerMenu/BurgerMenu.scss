@@ -1,5 +1,7 @@
 .burger {
-	position: relative;
+	@media (min-width: 480px) {
+		display: none;
+	}
 
 	& .burger__wrapp {
 		width: 35px;

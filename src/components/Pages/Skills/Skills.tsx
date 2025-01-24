@@ -1,25 +1,12 @@
 import './Skills.scss';
 import { USER } from '../../../data/user';
 import { FC } from 'react';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+import { useAnimationSkills } from '../../../hooks/useAnimationSkills';
 
 const Skills: FC = () => {
 	const skills = USER.skills;
 
-	gsap.registerPlugin(useGSAP);
-	useGSAP(() => {
-		const tl = gsap.timeline();
-		tl.fromTo(
-			'.skills__title',
-			{ opacity: 0 },
-			{ opacity: 1, duration: 0.5, ease: 'power1.inOut' }
-		).fromTo(
-			'.skills__list-card',
-			{ opacity: 0 },
-			{ opacity: 1, duration: 0.7, stagger: 0.3, ease: 'power1.inOut' }
-		);
-	});
+	useAnimationSkills();
 
 	return (
 		<div className='skills'>

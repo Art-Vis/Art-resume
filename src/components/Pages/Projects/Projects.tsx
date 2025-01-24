@@ -1,25 +1,12 @@
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
 import { USER } from '../../../data/user';
 import './Projects.scss';
 import ProjectCard from './ProjectCard/ProjectCard';
+import { useAnimationProject } from '../../../hooks/useAnimationProject';
 
 const Projects = () => {
 	const userProjects = USER.project;
 
-	gsap.registerPlugin(useGSAP);
-	useGSAP(() => {
-		const tl = gsap.timeline();
-		tl.fromTo(
-			'.projects__title',
-			{ opacity: 0 },
-			{ opacity: 1, duration: 0.5, ease: 'power1.inOut' }
-		).fromTo(
-			'.projects__list-card',
-			{ opacity: 0 },
-			{ opacity: 1, duration: 0.7, stagger: 0.2, ease: 'power1.inOut' }
-		);
-	});
+	useAnimationProject();
 
 	return (
 		<div className='projects'>

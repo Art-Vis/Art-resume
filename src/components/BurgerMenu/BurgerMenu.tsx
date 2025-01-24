@@ -3,6 +3,7 @@ import './BurgerMenu.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeMenu, toggleMenu } from '../../store/slices/menuSlices';
 import { RootState } from '../../store/store';
+import { useAnimationButtonsBurger } from '../../hooks/useAnimationButtons';
 
 export const BurgerMenu = () => {
 	const dispatch = useDispatch();
@@ -15,6 +16,8 @@ export const BurgerMenu = () => {
 	const handleMenuClick = () => {
 		dispatch(closeMenu()); // Закрытие меню при клике на ссылку
 	};
+
+	useAnimationButtonsBurger();
 
 	return (
 		<div className='burger'>

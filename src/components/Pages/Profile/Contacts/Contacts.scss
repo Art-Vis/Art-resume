@@ -1,18 +1,23 @@
+@use '@styles/_variables' as style;
+@use '@styles/_mixins' as mixin;
+
 .white {
 	& .contacts {
-		& .contacts__link svg {
-			color: #002366;
-			opacity: 0.5;
-		}
+		& .contacts__links {
+			& .contacts__link {
+				display: flex;
+				align-items: center;
 
-		& .contacts__link {
-			display: flex;
-			align-items: center;
-			transition: all 0.3s ease-in-out;
-
-			:hover {
-				color: white;
-				transition: all 0.3s ease-in-out;
+				& svg {
+					color: style.$white-theme-color;
+					opacity: 0.5;
+					transition: all 0.3s ease-in-out;
+				}
+				&:hover {
+					& svg {
+						@include mixin.social-icon-hover(style.$hover-color);
+					}
+				}
 			}
 		}
 	}
@@ -42,30 +47,33 @@
 			gap: 6px;
 		}
 
-		& .contacts__link svg {
-			width: 30px;
-			height: 30px;
-			color: gray;
-		}
-
 		& .contacts__link {
 			display: flex;
 			align-items: center;
+			padding: 5px;
 			transition: all 0.3s ease-in-out;
 
-			:hover {
-				color: white;
-				transition: all 0.3s ease-in-out;
+			& svg {
+				width: 30px;
+				height: 30px;
+				color: gray;
+
+				@media (max-width: 768px) {
+					width: 20px;
+					height: 20px;
+				}
+
+				@media (max-width: 480px) {
+					// width: 15px;
+					// height: 15px;
+				}
 			}
 
-			@media (max-width: 768px) {
-				width: 20px;
-				height: 20px;
-			}
-
-			@media (max-width: 480px) {
-				width: 15px;
-				height: 15px;
+			&:hover {
+				& svg {
+					@include mixin.social-icon-hover(style.$dark-theme-color);
+					transition: all 0.3s ease-in-out;
+				}
 			}
 		}
 	}

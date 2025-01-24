@@ -4,7 +4,7 @@
 			background-color: rgba(128, 128, 128, 0.2);
 
 			& .img {
-				border: 3px solid rgba(128, 128, 128, 0.9);
+				border: 3px solid rgba(73, 73, 73, 0.9);
 			}
 
 			& .title {
@@ -48,10 +48,16 @@
 	& .link {
 		display: flex;
 		gap: 15px;
+
+		@media (max-width: 480px) {
+			flex-direction: column-reverse;
+		}
 	}
 
 	& .img {
 		width: 140px;
+		height: 89px;
+		object-fit: contain;
 		border-radius: 4px;
 		border: 3px solid rgba(128, 128, 128, 0.5);
 		transition: border 0.2s ease-in-out;
@@ -83,6 +89,7 @@
 
 	& .tech-list {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 5px;
 	}
 

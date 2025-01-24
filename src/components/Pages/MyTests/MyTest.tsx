@@ -1,22 +1,9 @@
 import { Link } from 'react-router-dom';
 import './MyTest.scss';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+import { useAnimationMyTest } from '../../../hooks/useAnimationMyTest';
 
 const MyTests = () => {
-	gsap.registerPlugin(useGSAP);
-	useGSAP(() => {
-		const tl = gsap.timeline();
-		tl.fromTo(
-			'.tests__title',
-			{ opacity: 0 },
-			{ opacity: 1, duration: 0.5, ease: 'power1.inOut' }
-		).fromTo(
-			'.tests__card',
-			{ opacity: 0 },
-			{ opacity: 1, duration: 0.7, stagger: 0.3, ease: 'power1.inOut' }
-		);
-	});
+	useAnimationMyTest();
 
 	return (
 		<div className='tests'>

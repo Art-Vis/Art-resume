@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import './SwitchTheme.scss';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+import { useAnimationButtonsSwitch } from '../../hooks/useAnimationButtons';
 
 const SwitchTheme: FC = () => {
 	const [isWhite, setIsWhite] = useState(false);
@@ -14,15 +13,7 @@ const SwitchTheme: FC = () => {
 		}
 	}, [isWhite]);
 
-	gsap.registerPlugin(useGSAP);
-	useGSAP(() => {
-		const tl = gsap.timeline();
-		tl.fromTo(
-			'.switch',
-			{ opacity: 0 },
-			{ opacity: 1, duration: 3, ease: 'power1.inOut' }
-		);
-	});
+	useAnimationButtonsSwitch();
 
 	return (
 		<div className='switch'>
