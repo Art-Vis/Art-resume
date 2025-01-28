@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import './BurgerMenu.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { closeMenu, toggleMenu } from '../../store/slices/menuSlices';
-import { RootState } from '../../store/store';
-import { useAnimationButtonsBurger } from '../../hooks/useAnimationButtons';
+import { closeMenu, toggleMenu } from '@store/slices/menuSlices';
+import { RootState } from '@store/store';
+import { useAnimationButtonsBurger } from '@hooks/useAnimationButtons';
 
 export const BurgerMenu = () => {
 	const dispatch = useDispatch();

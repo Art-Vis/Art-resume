@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import './Question.scss';
-import { QuestionProps } from '../../../../data/interface';
+import { QuestionProps } from '@data/interface';
 
 const Question: FC<QuestionProps> = ({
 	question,

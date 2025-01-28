@@ -1,0 +1,8 @@
+@use '@styles/variables' as style;
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: style.$gap-block-descktop;
+	padding-bottom: 50px;
+}

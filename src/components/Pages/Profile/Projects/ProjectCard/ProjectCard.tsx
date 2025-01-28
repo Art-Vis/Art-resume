@@ -1,12 +1,8 @@
+import { ProjectCardProps } from '@data/interface';
 import { FC } from 'react';
 import { GoArrowUpRight } from 'react-icons/go';
-import { IProject } from '../../../../data/interface';
 
-interface ProjectCardProps {
-	project: IProject;
-}
-
-const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: FC<{ project: ProjectCardProps }> = ({ project }) => {
 	const { link, title, description, img, tech } = project;
 
 	return (

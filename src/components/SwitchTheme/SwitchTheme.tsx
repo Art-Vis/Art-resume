@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import './SwitchTheme.scss';
-import { useAnimationButtonsSwitch } from '../../hooks/useAnimationButtons';
+import { useAnimationButtonsSwitch } from '@hooks/useAnimationButtons';
 
 const SwitchTheme: FC = () => {
 	const [isWhite, setIsWhite] = useState(false);

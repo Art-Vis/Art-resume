@@ -1,31 +1,22 @@
 import { FC } from 'react';
 import './Profile.scss';
-import Contacts from './Contacts/Contacts';
-import { USER } from '../../../data/user';
+import { USER } from '@data/user';
 import img from '@assets/im.jpg';
 import { useAnimationProfile } from '../../../hooks/useAnimationProfile';
+import ProfileCard from './ProfileCard/ProfileCard';
+import Info from './Info/Info';
 
 const Profile: FC = () => {
 	const user = USER;
-
 	useAnimationProfile();
 
 	return (
-		<div className='profile'>
-			<div className='profile__card'>
-				<img className='profile__card-img' src={img} alt='user' />
-				<h3 className='profile__card-fullname'>{user.fullName}</h3>
-				<p className='profile__card-work'>{user.work}</p>
-				<Contacts />
-			</div>
-			<div className='profile__biography'>
-				{user.biography.map((item, index) => (
-					<p className='profile__biography-item' key={index}>
-						{item}
-					</p>
-				))}
-			</div>
-		</div>
+		<section className='profile'>
+			<ProfileCard
+				profileCard={{ img, fullName: user.fullName, work: user.work }}
+			/>
+			<Info user={user} />
+		</section>
 	);
 };
 

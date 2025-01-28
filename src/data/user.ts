@@ -1,8 +1,15 @@
 import { IUser } from './interface';
+import { FaHtml5, FaCss3, FaJs, FaReact, FaGit, FaCode } from 'react-icons/fa';
 import pomodoro from '@assets/pomodoro1-n.png';
 import converter from '@assets/converter1-n.png';
 import scroll from '@assets/3d-scroll-n.png';
 import calculator from '@assets/calculator1-n.png';
+import certificateReact from '@assets/React.png';
+import certificateJs from '@assets/JS.jpg';
+import certificateHtml from '@assets/html.jpg';
+import certificateFrontend from '@assets/Front.jpg';
+import { SiGreensock, SiJest, SiTypescript, SiWebpack } from 'react-icons/si';
+import { TbApi, TbBrandVite } from 'react-icons/tb';
 
 export const USER: IUser = {
 	id: 0,
@@ -11,7 +18,6 @@ export const USER: IUser = {
 	city: 'Санкт-Петербург',
 	work: 'Frontend developer',
 	img: './src/assets/im.jpg',
-	bio: 'Привет! Меня зовут Артём, и я фронтенд разработчик с фокусом на создании удивительных пользовательских интерфейсов. Мой опыт включает в себя работу с HTML, CSS, JavaScript, React. Я стремлюсь к тому, чтобы каждый проект, над которым я работаю, был не только функциональным, но и красивым. Готов внести свой вклад в ваш следующий проект и принести к нему свежие идеи и энергию!',
 	biography: [
 		'Frontend-разработчик с 2-летним опытом работы в разработке. ',
 		'Проявил интерес к компьютерам и программированию еще в раннем возрасте. ',
@@ -21,44 +27,107 @@ export const USER: IUser = {
 		'Мой талант в создании эстетически привлекательных и интуитивно понятных интерфейсов. ',
 		'Я активно слежу за новыми технологиями и тенденциями в области веб-разработки, участвую в профессиональных мероприятиях и конференциях, а также принимаю участие в интересных интенсивах. ',
 	],
-	skills: [
-		{
-			id: 0,
-			title: 'HTML',
-			info: 'Владею HTML5 и имею глубокое понимание его семантики и возможностей. Мои навыки включают создание чистой, адаптивной, кроссбраузерной и семантической верстки HTML-кода. При необходимости PixelPerfect. Имеется опыт оптимизации и улучшения производительности. Работа с макетами в Photoshop,Figma.',
-		},
+	certificates: [
 		{
 			id: 1,
-			title: 'CSS',
-			info: 'Работаю с препроцессорами CSS, такими как Less и SCSS, и использую их для создания эффективного и модульного CSS-кода. Мои навыки включают использование переменных, миксинов, вложенности и других возможностей этих инструментов для упрощения и оптимизации стилей.',
+			title: 'React',
+			descr: 'This certificate validates my skills as a frontend developer.',
+			imgSrc: certificateReact,
 		},
 		{
 			id: 2,
 			title: 'JavaScript',
-			info: 'Уровень владения JavaScript находится на продвинутом уровне. Я имею глубокое понимание языка, включая замыкания, прототипы и асинхронное программирование. ES6+ (в т. ч. классы, промисы, модули). Использование различных библиотек, Опыт работы с JSON, Debug кода',
+			descr: 'Certificate awarded for mastering React framework.',
+			imgSrc: certificateJs,
+		},
+		{
+			id: 3,
+			title: 'HTML',
+			descr: 'Certificate awarded for mastering React framework.',
+			imgSrc: certificateHtml,
+		},
+		{
+			id: 4,
+			title: 'Frontend',
+			descr: 'Certificate awarded for mastering React framework.',
+			imgSrc: certificateFrontend,
+		},
+	],
+	skills: [
+		{
+			id: 0,
+			title: 'HTML',
+			info: 'Владею HTML5 и имею глубокое понимание его семантики. Могу создавать адаптивную и кроссбраузерную верстку с точностью до пикселя (PixelPerfect). Работаю с макетами в Photoshop и Figma.',
+			icon: FaHtml5,
+		},
+		{
+			id: 1,
+			title: 'CSS',
+			info: 'Опыт работы с препроцессорами (SCSS, LESS). Пишу по принципу методологии BEM. Умею создавать адаптивную и кроссбраузерную верстку, а также работать с CSS-анимациями.',
+			icon: FaCss3,
+		},
+		{
+			id: 2,
+			title: 'JavaScript',
+			info: 'Продвинутый уровень. Знания замыканий, прототипов, асинхронного программирования (Promises, async/await), ES6+ (классы, модули). Опыт работы с JSON, отладки кода (debugging).',
+			icon: FaJs,
 		},
 		{
 			id: 3,
 			title: 'React',
-			info: 'Имею хороший уровень владения React.js. С помощью этой библиотеки я создавал сложные пользовательские интерфейсы и веб-приложения.',
+			info: 'Хорошее знание React, опыт создания сложных пользовательских интерфейсов и SPA. В разработке использую React Router, Redux и его инструментами (например, Redux Toolkit).',
+			icon: FaReact,
 		},
 		{
 			id: 4,
-			title: 'TyeScript',
-			info: 'Обладаю хорошими знаниями в TypeScript. Этот язык помогает мне писать более надежный и масштабируемый код в React и других проектах, обеспечивая строгую типизацию и уменьшение числа ошибок.',
+			title: 'TypeScript',
+			info: 'Использую TypeScript для строгой типизации в React-проектах, что помогает улучшить масштабируемость и уменьшить количество ошибок в коде.',
+			icon: SiTypescript,
 		},
 		{
 			id: 5,
 			title: 'Git',
-			info: 'Владею системой контроля версий Git и использую ее для управления кодом и совместной разработки. Мои навыки включают работу с ветками, слияниями, коммитами, а также использование удаленных репозиториев и сервисов, таких как GitHub или GitLab.',
+			info: 'Опыт работы с системой контроля версий Git. Использую для управления репозиториями, работы с ветками, слияниями, коммитами.',
+			icon: FaGit,
 		},
 		{
 			id: 6,
-			title: 'Остальное',
-			info: 'Знаком с инструментами разработки, такими как Webpack, Babel, ESLint и Git. Эти инструменты помогают мне управлять и оптимизировать процесс разработки.Работа с анимациями(GSAP), React Router, Redux, Context API.',
+			title: 'GSAP',
+			info: 'Работал с GSAP для создания анимаций. Могу интегрировать анимации в проекты, используя CSS или GSAP для более сложных движений.',
+			icon: SiGreensock,
+		},
+		{
+			id: 7,
+			title: 'Webpack',
+			info: 'Имею опыт работы с Webpack. Собирал проекты, настраивал сборку и тоннели для разработки.',
+			icon: SiWebpack,
+		},
+		{
+			id: 8,
+			title: 'API',
+			info: 'Опыт работы с API: отправка запросов (GET, POST, PUT, DELETE) на сервер с фронтенда для работы с данными в БД.',
+			icon: TbApi,
+		},
+		{
+			id: 9,
+			title: 'Testing (Jest)',
+			info: 'Имел опыт работы с Jest для тестирования компонентов и логики в React. Основной акцент на юнит-тестах.',
+			icon: SiJest,
+		},
+		{
+			id: 10,
+			title: 'Functional Programming',
+			info: 'Использую принципы функционального программирования для повышения читаемости и предсказуемости кода, включая такие подходы, как чистые функции и неизменяемость данных.',
+			icon: FaCode,
+		},
+		{
+			id: 11,
+			title: 'Vite',
+			info: 'Использую Vite для быстрого и удобного процесса сборки проектов. Он значительно ускоряет разработку благодаря быстрому перезапуску при изменении кода и поддерживает современные фичи, такие как модульная система ES и встроенная поддержка TypeScript.',
+			icon: TbBrandVite,
 		},
 	],
-	project: [
+	projects: [
 		{
 			title: 'Pomodoro',
 			description: 'A productivity timer based on the Pomodoro technique.',

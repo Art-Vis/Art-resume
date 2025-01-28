@@ -1,0 +1,29 @@
+@use '@styles/variables' as style;
+
+.certificates {
+	display: flex;
+	flex-direction: column;
+	gap: style.$gap-block-descktop;
+
+	&__title {
+		display: flex;
+		justify-content: start;
+		font-size: style.$fs-title-descktop;
+
+		@media (max-width: 768px) {
+			font-size: style.$fs-title-tab;
+		}
+
+		@media (max-width: 480px) {
+			font-size: style.$fs-title-mobile;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+}

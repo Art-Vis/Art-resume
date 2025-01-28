@@ -27,7 +27,7 @@
 
 .main {
 	flex-grow: 1;
-	padding: style.$section-padding-descktop;
+	// padding: style.$section-padding-descktop;
 	z-index: 1;
 
 	@media (max-width: 768px) {

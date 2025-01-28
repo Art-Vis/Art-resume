@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
 import './MyTest.scss';
-import { useAnimationMyTest } from '../../../hooks/useAnimationMyTest';
+import { useAnimationMyTest } from '@hooks/useAnimationMyTest';
+import { FC } from 'react';
 
-const MyTests = () => {
+const MyTests: FC = () => {
 	useAnimationMyTest();
 
 	return (
 		<div className='tests'>
-			<h1 className='tests__title'>Выберите тест</h1>
+			<h2 className='tests__title'>Выберите тест</h2>
 			<div className='tests__cards'>
 				<div className='tests__card frontend'>
 					<Link className='tests__card-link' to={'/frontend-test'}></Link>

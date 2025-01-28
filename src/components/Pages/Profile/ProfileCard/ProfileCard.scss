@@ -1,0 +1,119 @@
+@use '@styles/variables' as style;
+
+.profile__card {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	max-height: calc(100vh - 50px);
+	position: sticky;
+	top: 50px;
+	padding: 0 0 50px 0;
+	gap: 25px;
+	max-width: 500px;
+	width: 100%;
+
+	@media (max-width: 768px) {
+		display: grid;
+		grid-template-columns: 2fr auto;
+		align-items: end;
+		position: static;
+	}
+
+	@media (max-width: 480px) {
+		grid-template-columns: 1fr;
+	}
+
+	&-img {
+		max-width: 100%;
+		border-radius: 8px;
+
+		@media (max-width: 768px) {
+			// display: none;
+		}
+
+		@media (max-width: 480px) {
+			grid-row: span 2;
+		}
+	}
+
+	&-info {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+		align-items: start;
+	}
+
+	&-fullname {
+		font-size: style.$fs-fullname-descktop;
+		font-weight: 400;
+
+		@media (max-width: 768px) {
+			font-size: style.$fs-fullname-tab;
+		}
+
+		@media (max-width: 480px) {
+			font-size: style.$fs-fullname-mobile;
+			margin: 0;
+		}
+	}
+
+	&-work {
+		font-size: 28px;
+		font-weight: 400;
+		opacity: 0.5;
+
+		font-size: style.$fs-work-descktop;
+		font-weight: 400;
+
+		@media (max-width: 768px) {
+			font-size: style.$fs-work-tab;
+		}
+
+		@media (max-width: 480px) {
+			grid-column: 2;
+			font-size: style.$fs-work-mobile;
+		}
+	}
+
+	.profile__link {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		width: 100%;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+
+		&-item {
+			display: flex;
+			align-items: center;
+			font-size: 18px;
+			gap: 10px;
+			opacity: 0.5;
+			transition: font-size 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+			&:hover {
+				opacity: 1;
+
+				& span {
+					width: 40%;
+				}
+			}
+
+			& span {
+				display: block;
+				height: 1px;
+				width: 20%;
+				background-color: #ffffff;
+				transition: width 0.3s ease-in-out;
+			}
+		}
+		&-item-active {
+			opacity: 1;
+			& span {
+				width: 40%;
+			}
+		}
+	}
+}

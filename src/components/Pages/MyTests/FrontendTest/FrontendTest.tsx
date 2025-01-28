@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import { questionsFrontend } from '../../../../data/question';
+import { questionsFrontend } from '@data/question';
 import Question from '../Question/Question';
 import './FrontendTest.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../../store/store';
-import { nextQuestion } from '../../../../store/slices/questionSlices';
+import { RootState } from '@store/store';
+import { nextQuestion } from '@store/slices/questionSlices';
 
 const InterviewTest: FC = () => {
 	const currentQuestionIndex = useSelector(
@@ -25,7 +25,7 @@ const InterviewTest: FC = () => {
 	};
 	return (
 		<div className='test'>
-			<h1 className='test__title'>Frontend</h1>
+			<h2 className='test__title'>Frontend</h2>
 			{!isTestComplete ? (
 				<Question
 					question={questionsFrontend[currentQuestionIndex].question}
@@ -34,7 +34,7 @@ const InterviewTest: FC = () => {
 					onAnswer={handleAnswer}
 				/>
 			) : (
-				<h2>Тест завершен, отличная работа!</h2>
+				<h3>Тест завершен, отличная работа!</h3>
 			)}
 			<div className='test__current-question'>
 				{currentQuestionIndex + 1}/{questionsFrontend.length}

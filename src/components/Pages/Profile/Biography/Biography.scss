@@ -1,0 +1,41 @@
+@use '@styles/variables' as style;
+
+.biography {
+	display: flex;
+	flex-direction: column;
+	gap: style.$gap-block-descktop;
+
+	&__title {
+		display: flex;
+		justify-content: start;
+		font-size: style.$fs-title-descktop;
+
+		@media (max-width: 768px) {
+			font-size: style.$fs-title-tab;
+		}
+
+		@media (max-width: 480px) {
+			font-size: style.$fs-title-mobile;
+		}
+	}
+
+	&__list {
+		&-item {
+			&-text {
+				line-height: 1.5;
+				text-align: start;
+				font-size: style.$fs-descr-descktop;
+				font-weight: 400;
+				pointer-events: none;
+
+				@media (max-width: 768px) {
+					font-size: style.$fs-descr-tab;
+				}
+
+				@media (max-width: 480px) {
+					font-size: style.$fs-descr-mobile;
+				}
+			}
+		}
+	}
+}

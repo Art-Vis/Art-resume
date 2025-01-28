@@ -2,91 +2,12 @@
 
 .profile {
 	display: flex;
+	flex-direction: row;
 	gap: 30px;
+	min-height: 75vh;
 
 	@media (max-width: 768px) {
 		flex-direction: column;
 		gap: 20px;
-	}
-
-	& .profile__card {
-		display: flex;
-		flex-direction: column;
-		align-items: start;
-		gap: 25px;
-		max-width: 500px;
-		width: 100%;
-
-		@media (max-width: 768px) {
-		}
-
-		@media (max-width: 480px) {
-			display: flex;
-			gap: 10px;
-		}
-
-		& .profile__card-img {
-			max-width: 100%;
-			border-radius: 8px;
-
-			@media (max-width: 768px) {
-				display: none;
-			}
-
-			@media (max-width: 480px) {
-				grid-row: span 2;
-			}
-		}
-
-		& .profile__card-fullname {
-			font-size: style.$fs-fullname-descktop;
-			font-weight: 400;
-
-			@media (max-width: 768px) {
-				font-size: style.$fs-fullname-tab;
-			}
-
-			@media (max-width: 480px) {
-				font-size: style.$fs-fullname-mobile;
-				margin: 0;
-			}
-		}
-
-		& .profile__card-work {
-			font-size: 28px;
-			font-weight: 400;
-			opacity: 0.5;
-
-			font-size: style.$fs-work-descktop;
-			font-weight: 400;
-
-			@media (max-width: 768px) {
-				font-size: style.$fs-work-tab;
-			}
-
-			@media (max-width: 480px) {
-				grid-column: 2;
-				font-size: style.$fs-work-mobile;
-			}
-		}
-	}
-
-	& .profile__biography {
-		& .profile__biography-item {
-			opacity: 0.5;
-			line-height: 1.5;
-			text-align: start;
-			font-size: style.$fs-descr-descktop;
-			font-weight: 400;
-			pointer-events: none;
-
-			@media (max-width: 768px) {
-				font-size: style.$fs-descr-tab;
-			}
-
-			@media (max-width: 480px) {
-				font-size: style.$fs-descr-mobile;
-			}
-		}
 	}
 }
