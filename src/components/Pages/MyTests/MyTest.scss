@@ -3,14 +3,14 @@
 .tests {
 	display: flex;
 	flex-direction: column;
-	gap: style.$gap-block-descktop;
+	gap: style.$gap-section-descktop;
 
 	@media (max-width: 768px) {
-		gap: style.$gap-block-tab;
+		gap: style.$gap-section-tab;
 	}
 
 	@media (max-width: 480px) {
-		gap: style.$gap-block-mobile;
+		gap: style.$gap-section-mobile;
 	}
 
 	&__title {

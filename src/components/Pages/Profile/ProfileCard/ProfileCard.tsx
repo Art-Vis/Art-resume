@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useActiveLink } from '@hooks/useActiveLink';
-import Contacts from '../Contacts/Contacts';
+import Contacts from './Contacts/Contacts';
 import './ProfileCard.scss';
 import { ProfileCardProps } from '@data/interface';
 

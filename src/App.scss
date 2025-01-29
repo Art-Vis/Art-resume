@@ -4,7 +4,6 @@
 	min-width: 320px;
 	width: 100%;
 	min-height: 100vh;
-	flex-direction: column;
 	position: relative;
 	user-select: none;
 }
@@ -27,15 +26,15 @@
 
 .main {
 	flex-grow: 1;
-	// padding: style.$section-padding-descktop;
+	margin: style.$main-margin-descktop;
 	z-index: 1;
 
 	@media (max-width: 768px) {
-		padding: style.$section-padding-tab;
+		margin: style.$main-margin-tab;
 	}
 
 	@media (max-width: 480px) {
-		padding: style.$section-padding-mobile;
+		margin: style.$main-margin-mobile;
 	}
 }
 

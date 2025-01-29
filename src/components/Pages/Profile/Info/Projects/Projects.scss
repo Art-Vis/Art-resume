@@ -1,17 +1,17 @@
-@use '@styles/_variables' as style;
+@use '@styles/_variables.scss' as style;
 @use '@styles/_card.scss';
 
-.skills {
+.projects {
 	display: flex;
 	flex-direction: column;
-	gap: style.$gap-block-descktop;
+	gap: style.$gap-section-descktop;
 
 	@media (max-width: 768px) {
-		gap: style.$gap-block-tab;
+		gap: style.$gap-section-tab;
 	}
 
 	@media (max-width: 480px) {
-		gap: style.$gap-block-mobile;
+		gap: style.$gap-section-mobile;
 	}
 
 	&__title {
@@ -31,11 +31,16 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 10px;
+		justify-content: space-between;
+		gap: 20px;
+		padding: 10px 0;
+
+		@media (max-width: 768px) {
+			gap: 10px;
+		}
 
 		&-card {
-			flex-direction: column;
-			max-width: 300px;
+			max-width: 600px;
 			width: 100%;
 		}
 	}

@@ -3,7 +3,7 @@
 .certificates {
 	display: flex;
 	flex-direction: column;
-	gap: style.$gap-block-descktop;
+	gap: style.$gap-section-descktop;
 
 	&__title {
 		display: flex;
@@ -29,4 +29,20 @@
 			gap: 10px;
 		}
 	}
+}
+
+.swiper.swiper-cards {
+	width: 200px;
+	height: 283px;
+	margin-left: 33px;
+}
+
+.swiper-slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 18px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
 }

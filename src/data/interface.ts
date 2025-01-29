@@ -42,7 +42,6 @@ export interface MyCertificatesProps {
 export interface CertificateProps {
 	id: number; // Уникальный идентификатор сертификата
 	title: string; // Название сертификата
-	descr: string; // Описание сертификата
 	imgSrc: string; // Ссылка на изображение сертификата
 }
 

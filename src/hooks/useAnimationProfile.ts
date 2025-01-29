@@ -28,6 +28,11 @@ export const useAnimationProfile = () => {
 				animationSettings.fadeInTitle.to
 			)
 			.fromTo(
+				'.swiper-slide',
+				animationSettings.fadeInItem.from,
+				animationSettings.fadeInItem.to
+			)
+			.fromTo(
 				'.certificates__item',
 				animationSettings.fadeInItem.from,
 				animationSettings.fadeInItem.to

@@ -4,9 +4,9 @@ import './Certificate.scss';
 
 const Certificate: FC<CertificateProps> = ({ title, imgSrc }) => {
 	return (
-		<li className='certificates__item'>
-			<img className='certificates__item-img' src={imgSrc} alt={title} />
-		</li>
+		// <div className='certificates__item'>
+		<img className='certificates__item-img' src={imgSrc} alt={title} />
+		// </div>
 	);
 };
 
