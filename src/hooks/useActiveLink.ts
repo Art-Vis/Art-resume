@@ -14,7 +14,7 @@ export const useActiveLink = () => {
 					}
 				});
 			},
-			{ threshold: 0.2 }
+			{ threshold: 0.3, rootMargin: '0px 0px -50% 0px' }
 		);
 
 		sections.forEach(section => observer.observe(section));

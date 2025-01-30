@@ -1,4 +1,19 @@
 @use '@styles/variables' as style;
+.white {
+	.switch {
+		.moon svg {
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+body:not(.white) .sun svg {
+	&:hover {
+		color: yellow;
+	}
+}
 
 .switch {
 	display: -webkit-box;
@@ -12,27 +27,21 @@
 	-ms-flex-align: center;
 	align-items: center;
 
-	& .icon {
+	@media (max-width: 480px) {
+		gap: 3px;
+	}
+
+	& .icon svg {
 		display: block;
 		width: 25px;
 		height: 25px;
 		background-size: cover;
-	}
+		transition: color 0.3s ease-in-out;
 
-	& .sun {
-		background-image: url('/src/assets/sun-light.svg');
-	}
-
-	& .moon {
-		background-image: url('/src/assets/moon-light.svg');
-	}
-
-	& .sun.black {
-		background-image: url('/src/assets/sun-night.svg');
-	}
-
-	& .moon.black {
-		background-image: url('/src/assets/moon-night.svg');
+		@media (max-width: 480px) {
+			width: 15px;
+			height: 15px;
+		}
 	}
 
 	& .toggle-wrapper {
@@ -55,6 +64,11 @@
 			border-radius: 100px;
 			position: relative;
 
+			@media (max-width: 480px) {
+				width: 30px;
+				height: 15px;
+			}
+
 			&::before {
 				transition: all 0.2s ease-in-out;
 				content: '';
@@ -65,6 +79,13 @@
 				height: 19px;
 				background: #fff;
 				border-radius: 100%;
+
+				@media (max-width: 480px) {
+					top: 1px;
+					left: 0px;
+					width: 13px;
+					height: 13px;
+				}
 			}
 		}
 		#switch:checked + #toggle {

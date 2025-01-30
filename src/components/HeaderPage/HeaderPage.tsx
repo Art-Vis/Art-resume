@@ -34,16 +34,6 @@ const HeaderPage: FC<HeaderPageProps> = ({ onAnimationComplete }) => {
 								Главная
 							</Link>
 						</li>
-						{/* <li className='header__nav-item'>
-							<Link to={'/skills'} className='header__nav-link'>
-								Навыки
-							</Link>
-						</li> */}
-						{/* <li className='header__nav-item'>
-							<Link to={'/projects'} className='header__nav-link'>
-								Проекты
-							</Link>
-						</li> */}
 						<li className='header__nav-item'>
 							<Link to={'/my-tests'} className='header__nav-link'>
 								Тесты

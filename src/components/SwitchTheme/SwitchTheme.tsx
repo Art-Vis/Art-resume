@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import './SwitchTheme.scss';
 import { useAnimationButtonsSwitch } from '@hooks/useAnimationButtons';
+import { BsMoonStars, BsSun } from 'react-icons/bs';
 
 const SwitchTheme: FC = () => {
 	const [isWhite, setIsWhite] = useState(false);
@@ -16,8 +17,10 @@ const SwitchTheme: FC = () => {
 	useAnimationButtonsSwitch();
 
 	return (
-		<div className='switch'>
-			<div className={`moon icon ${isWhite ? 'black' : ''}`}></div>
+		<div className='switch switch-descktop switch-mobile'>
+			<button className='icon moon'>
+				<BsMoonStars />
+			</button>
 			<div className='toggle-wrapper'>
 				<input
 					type='checkbox'
@@ -26,7 +29,9 @@ const SwitchTheme: FC = () => {
 				/>
 				<label className='label' htmlFor='switch' id='toggle'></label>
 			</div>
-			<div className={`sun icon ${isWhite ? 'black' : ''}`}></div>
+			<button className='icon sun'>
+				<BsSun />
+			</button>
 		</div>
 	);
 };

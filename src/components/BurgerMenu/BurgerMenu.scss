@@ -1,88 +1,46 @@
 .burger {
+	@media (max-width: 480px) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
 	@media (min-width: 480px) {
 		display: none;
 	}
 
 	&__wrapp {
-		width: 35px;
-		height: 25px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		position: relative;
-		cursor: pointer;
-		z-index: 4;
+		width: 20px;
+		height: 20px;
+		transition: all 0.3s ease-in-out;
 
-		&.active &-bar:nth-child(1) {
-			transform: translateY(13px) rotate(45deg);
-		}
-
-		&.active &-bar:nth-child(2) {
-			opacity: 0;
-		}
-
-		&.active &-bar:nth-child(3) {
-			transform: translateY(-9px) rotate(-45deg);
-		}
-
-		&-bar {
-			display: block;
+		& svg {
 			width: 100%;
-			height: 4px;
-			background: linear-gradient(90deg, #ff8a00, #e52e71);
-			border-radius: 2px;
-			transition: all 0.3s ease;
+			height: 100%;
 		}
 	}
 }
 /* Меню */
 .menu {
-	position: fixed;
-	top: 0;
-	right: -100%;
-	width: 80%;
-	max-width: 500px;
-	height: 100%;
-	background: radial-gradient(
-		circle at center,
-		rgba(0, 0, 0, 1),
-		rgba(0, 0, 0, 0.8),
-		#2c003e 90%
-	);
-	color: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	transition: all 0.5s ease;
-	z-index: 3;
-	border: 2px solid inherit;
-	background-clip: padding-box;
-	box-shadow: 0 0 20px 10px rgba(255, 20, 147, 0.8),
-		0 0 40px 20px rgba(138, 43, 226, 0.6), 0 0 60px 30px rgba(255, 20, 147, 0.4);
 
 	&__list {
+		display: flex;
+		gap: 20px;
+		align-items: center;
 		text-align: center;
 
 		& .menu__item {
-			margin: 20px 0;
-
 			& .menu__link {
 				text-decoration: none;
-				color: #fff;
-				font-size: 24px;
-				font-weight: bold;
-				text-shadow: 0 0 10px #ff8a00, 0 0 20px #e52e71;
+				color: inherit;
+				font-size: 16px;
 				transition: all 0.3s ease;
-
-				&:hover {
-					color: #e52e71;
-					text-shadow: 0 0 15px #ff8a00, 0 0 30px #ff8a00;
-				}
 			}
 		}
 	}
-}
-/* Активное состояние меню */
-.active {
-	right: 0;
 }
