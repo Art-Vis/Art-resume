@@ -5,6 +5,14 @@
 	flex-direction: column;
 	gap: style.$gap-section-descktop;
 
+	@media (max-width: 768px) {
+		gap: style.$gap-section-tab;
+	}
+
+	@media (max-width: 480px) {
+		gap: style.$gap-section-mobile;
+	}
+
 	&__title {
 		display: flex;
 		justify-content: start;
