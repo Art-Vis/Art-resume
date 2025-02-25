@@ -3,16 +3,16 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { animationSettings } from '../utils/animationSettings';
 
-export const useAnimationLogo = (
-	onComplete?: () => void
-): { isVisible: boolean } => {
+export const useAnimationLogo = (onComplete?: () => void) => {
 	const [isVisible, setIsVisible] = useState(true);
 
 	useGSAP(() => {
 		const tl = gsap.timeline({
 			onComplete: () => {
-				if (onComplete) onComplete();
-				setIsVisible(false);
+				setTimeout(() => {
+					setIsVisible(false);
+					if (onComplete) onComplete();
+				}, 300); // Даем небольшую задержку перед размонтированием
 			},
 		});
 
@@ -34,7 +34,9 @@ export const useAnimationLogo = (
 			.to('.logo-animation', animationSettings.finallyPositionLogo)
 			.to('.left', { left: '-135px', opacity: 0 })
 			.to('.right', { right: '-135px', opacity: 0 });
-	});
+
+		return () => tl.kill(); // Очищаем анимацию при размонтировании
+	}, []);
 
 	return { isVisible };
 };

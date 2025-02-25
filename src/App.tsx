@@ -1,15 +1,23 @@
 import './App.scss';
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import Spot from './components/Spot/Spot';
 import LogoAnimation from './components/LogoAnimation/LogoAnimation';
-const LazyHeaderPage = lazy(() => import('./components/HeaderPage/HeaderPage'));
+
+const LazyHeaderPage = lazy(() => import('./components/Header/Header'));
 const LazyMainPage = lazy(() => import('./components/MainPage/MainPage'));
 
 function App() {
-	const [isAnimationComplete, setIsAnimationComplete] =
-		useState<boolean>(false);
+	const [isAnimationComplete, setIsAnimationComplete] = useState<boolean>(
+		() => localStorage.getItem('animationPlayed') === 'true'
+	);
 	const [isHeaderAnimationComplete, setIsHeaderAnimationComplete] =
 		useState<boolean>(false);
+
+	useEffect(() => {
+		if (!isAnimationComplete) {
+			localStorage.setItem('animationPlayed', 'true'); // Сохраняем в локальное хранилище
+		}
+	}, [isAnimationComplete]);
 
 	return (
 		<>

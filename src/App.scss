@@ -1,4 +1,5 @@
 @use '@styles/variables' as style;
+@use '@styles/_card.scss';
 
 #root {
 	min-width: 320px;
@@ -23,20 +24,6 @@
 }
 
 /* -----MAIN----- */
-
-.main {
-	flex-grow: 1;
-	margin: style.$main-margin-descktop;
-	z-index: 1;
-
-	@media (max-width: 768px) {
-		margin: style.$main-margin-tab;
-	}
-
-	@media (max-width: 480px) {
-		margin: style.$main-margin-mobile;
-	}
-}
 
 .main-container {
 	display: flex;

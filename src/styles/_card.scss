@@ -27,7 +27,7 @@
 	position: sticky;
 	cursor: pointer;
 	border-radius: 4px;
-	transition: background-color 0.2s ease-in-out, color 3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
 
 	&:hover {
 		background-color: rgba(128, 128, 128, 0.2);
@@ -74,7 +74,7 @@
 		align-items: center;
 		gap: 10px;
 		font-size: 18px;
-		transition: color 0.2s ease-in-out, bottom 0.2s ease-in-out,
+		transition: color 0.3s ease-in-out, bottom 0.2s ease-in-out,
 			left 0.2s ease-in-out;
 
 		& svg {

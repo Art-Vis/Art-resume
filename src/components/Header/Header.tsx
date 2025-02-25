@@ -1,4 +1,4 @@
-import './HeaderPage.scss';
+import './Header.scss';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { closeMenu } from '../../store/slices/menuSlices';

@@ -11,7 +11,7 @@ const MyCertificates: FC<MyCertificatesProps> = ({ userCertificates }) => {
 	return (
 		<section className='certificates' id='certificates'>
 			<h2 className='certificates__title'>Сертификаты</h2>
-			<div className='certificates__list'>
+			<ul className='certificates__list'>
 				<Swiper
 					effect={'cards'}
 					grabCursor={true}
@@ -28,7 +28,7 @@ const MyCertificates: FC<MyCertificatesProps> = ({ userCertificates }) => {
 						</SwiperSlide>
 					))}
 				</Swiper>
-			</div>
+			</ul>
 		</section>
 	);
 };
