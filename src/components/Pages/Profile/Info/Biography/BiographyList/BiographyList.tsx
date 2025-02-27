@@ -1,5 +1,8 @@
 import { FC } from 'react';
-import { BiographyListProps } from '@data/interface';
+
+interface BiographyListProps {
+	text: string;
+}
 
 const BiographyList: FC<BiographyListProps> = ({ text }) => {
 	return (

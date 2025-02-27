@@ -66,11 +66,9 @@
 	}
 
 	&-work {
-		font-weight: 400;
 		opacity: 0.5;
 
 		font-size: style.$fs-work-descktop;
-		font-weight: 400;
 
 		@media (max-width: 768px) {
 			font-size: style.$fs-work-tab;

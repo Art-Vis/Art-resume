@@ -1,9 +1,13 @@
 import './Skills.scss';
 import { FC } from 'react';
 import Skill from './Skill/Skill';
-import { SkillsProps } from '@data/interface';
+import { SkillProps } from '@data/interface';
 
-const Skills: FC<SkillsProps> = ({ userSkills }) => {
+interface SkillsComponentProps {
+	userSkills: SkillProps[];
+}
+
+const Skills: FC<SkillsComponentProps> = ({ userSkills }) => {
 	return (
 		<section className='skills' id='skills'>
 			<h2 className='skills__title'>Навыки</h2>

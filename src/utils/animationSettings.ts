@@ -21,7 +21,7 @@ export const animationSettings = {
 	},
 	fadeInProfileInfo: {
 		from: { opacity: 0 },
-		to: { opacity: 0.7, duration: 1, stagger: 0.2, ease: 'power1.inOut' },
+		to: { opacity: 1, duration: 1, stagger: 0.2, ease: 'power1.inOut' },
 	},
 	slideLogoRight: {
 		from: { right: '-135px', opacity: 0 },

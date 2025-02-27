@@ -1,6 +1,6 @@
 @use '@styles/variables' as style;
 
-.biography {
+.experience {
 	display: flex;
 	flex-direction: column;
 	gap: style.$gap-section-descktop;
@@ -24,6 +24,34 @@
 
 		@media (max-width: 480px) {
 			font-size: style.$fs-title-mobile;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+			min-width: 300px;
+			padding: 5px;
+
+			&-position {
+				text-align: start;
+				font-size: 22px;
+				font-weight: 400;
+
+				@media (max-width: 768px) {
+					font-size: 18px;
+				}
+
+				@media (max-width: 480px) {
+					font-size: 14px;
+				}
+			}
 		}
 	}
 }

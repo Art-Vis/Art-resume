@@ -1,3 +1,5 @@
+@use '@styles/variables' as style;
+
 @font-face {
 	font-family: 'Poppins';
 	font-weight: 300;
@@ -53,8 +55,19 @@ a {
 }
 
 p {
-	font-size: 14px;
-	line-height: 21px;
+	line-height: 1.5;
+	text-align: start;
+	font-size: style.$fs-descr-descktop;
+	font-weight: 400;
+	opacity: 0.7;
+
+	@media (max-width: 768px) {
+		font-size: style.$fs-descr-tab;
+	}
+
+	@media (max-width: 480px) {
+		font-size: style.$fs-descr-mobile;
+	}
 }
 
 ul,

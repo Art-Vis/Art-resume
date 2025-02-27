@@ -10,7 +10,7 @@ const Question: FC<QuestionProps> = ({
 }) => {
 	const handleAnswerClick = (option: string) => {
 		const isCorrect = option === correctAnswer;
-		onAnswer(isCorrect);
+		onAnswer?.(isCorrect);
 	};
 
 	return (

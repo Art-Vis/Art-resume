@@ -1,79 +1,69 @@
 export interface IUser {
-	id: number;
+	readonly id: number;
 	email: string;
 	fullName: string;
 	city: string;
 	work: string;
 	img: string;
 	biography: string[];
+	experience: ExperienceProps[];
 	certificates: CertificateProps[];
 	skills: SkillProps[];
-	projects: ProjectCardProps[];
+	projects: ProjectProps[];
 }
 
-// Интерфейс для проекта
-export interface ProjectCardProps {
-	link: string; // Ссылка на проект
-	title: string; // Название проекта
-	description: string; // Описание проекта
-	img: string; // Ссылка на изображение проекта
-	tech: string[]; // Технологии, использованные в проекте
-}
-
-// Интерфейс для проекта
-export interface ProjectsProps {
-	userProjects: ProjectCardProps[];
-}
-
+// Обо мне
 export interface BiographyArrayProps {
 	userBiography: string[];
 }
 
-// Интерфейс для списка биографии
-export interface BiographyListProps {
-	text: string; // Текст элемента биографии
+// Опыт работы
+export interface ExperienceProps {
+	position: string; // Должность
+	duration: string; // Стаж работы
+	responsibilities: string[]; // Список обязанностей
 }
 
-export interface MyCertificatesProps {
-	userCertificates: CertificateProps[];
-}
-
-// Интерфейс для сертификата
+// Сертификаты
 export interface CertificateProps {
-	id: number; // Уникальный идентификатор сертификата
+	readonly id: number; // Уникальный идентификатор сертификата
 	title: string; // Название сертификата
 	imgSrc: string; // Ссылка на изображение сертификата
 }
 
-// Интерфейс для навыка
+// Навыки
 export interface SkillProps {
-	id?: number; // Уникальный идентификатор навыка (опционально)
+	readonly id?: number; // Уникальный идентификатор навыка (опционально)
 	title: string; // Название навыка
 	info: string; // Краткое описание навыка
-	icon: React.ComponentType<React.SVGProps<SVGSVGElement>>; // Иконка для навыка
+	icon: React.ElementType; // Компонент иконки
 }
 
-export interface SkillsProps {
-	userSkills: SkillProps[];
+// Проект
+export interface ProjectProps {
+	link: string; // Ссылка на проект
+	title: string; // Название проекта
+	description: string; // Описание проекта
+	img: string; // Ссылка на изображение проекта
+	tech: string[]; // Используемые технологии
 }
 
+// Проекты
+export interface ProjectsProps {
+	userProjects: ProjectProps[]; // Массив проектов
+}
+
+// Карточка профиля
 export interface ProfileCardProps {
 	img: string;
 	fullName: string;
 	work: string;
 }
 
-// Интерфейс для вопроса
+// Вопросы (для тестов, квизов)
 export interface QuestionProps {
 	question: string; // Вопрос
 	options: string[]; // Варианты ответа
 	correctAnswer: string; // Правильный ответ
-	onAnswer: (isCorrect: boolean) => void; // Колбэк при ответе на вопрос
-}
-
-// Интерфейс для данных вопросов
-export interface QuestionData {
-	question: string; // Вопрос
-	options: string[]; // Варианты ответа
-	correctAnswer: string; // Правильный ответ
+	onAnswer?: (isCorrect: boolean) => void; // Колбэк при ответе
 }

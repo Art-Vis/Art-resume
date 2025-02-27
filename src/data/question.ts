@@ -1,6 +1,6 @@
-import { QuestionData } from './interface';
+import { QuestionProps } from './interface';
 
-export const questionsFrontend: QuestionData[] = [
+export const questionsFrontend: QuestionProps[] = [
 	{
 		question: 'Что такое JSX?',
 		options: ['Функция в React', 'Расширение JavaScript', 'Библиотека'],
