@@ -1,10 +1,18 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import * as path from 'path';
+import imagemin from 'vite-plugin-imagemin';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()],
+	plugins: [
+		react(),
+		imagemin({
+			gifsicle: { optimizationLevel: 3 },
+			mozjpeg: { quality: 75 },
+			optipng: { optimizationLevel: 5 },
+			svgo: { plugins: [{ removeViewBox: false }] },
+		}),
+	],
 	resolve: {
 		alias: {
 			'@styles': path.resolve(__dirname, './src/styles'),

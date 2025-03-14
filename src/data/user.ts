@@ -4,6 +4,7 @@ import pomodoro from '@assets/pomodoro1-n.png';
 import converter from '@assets/converter1-n.png';
 import scroll from '@assets/3d-scroll-n.png';
 import calculator from '@assets/calculator1-n.png';
+import certificateGreenApi from '@assets/greenApi.jpg';
 import certificateReact from '@assets/React.png';
 import certificateJs from '@assets/JS.jpg';
 import certificateHtml from '@assets/html.jpg';
@@ -47,6 +48,11 @@ export const USER: IUser = {
 		},
 	],
 	certificates: [
+		{
+			id: 0,
+			title: 'Green-Api',
+			imgSrc: certificateGreenApi,
+		},
 		{
 			id: 1,
 			title: 'React',
