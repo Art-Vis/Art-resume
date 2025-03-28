@@ -1,10 +1,10 @@
 import './App.scss';
 import { lazy, Suspense, useEffect, useState } from 'react';
-import Spot from './components/Spot/Spot';
-import LogoAnimation from './components/LogoAnimation/LogoAnimation';
+import Spot from '@components/Spot/Spot';
+import LogoAnimation from '@components/LogoAnimation/LogoAnimation';
 
-const LazyHeaderPage = lazy(() => import('./components/Header/Header'));
-const LazyMainPage = lazy(() => import('./components/MainPage/MainPage'));
+const LazyHeader = lazy(() => import('@components/Header/Header'));
+const LazyMainInfo = lazy(() => import('@components/MainInfo/MainInfo'));
 
 function App() {
 	const [isAnimationComplete, setIsAnimationComplete] = useState<boolean>(
@@ -28,12 +28,12 @@ function App() {
 
 			{isAnimationComplete && (
 				<>
-					<LazyHeaderPage
+					<LazyHeader
 						onAnimationComplete={() => setIsHeaderAnimationComplete(true)}
 					/>
 					{isHeaderAnimationComplete && (
 						<Suspense fallback={<div className='spinner'></div>}>
-							<LazyMainPage />
+							<LazyMainInfo />
 						</Suspense>
 					)}
 				</>
