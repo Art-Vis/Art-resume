@@ -1,10 +1,10 @@
 import './App.scss';
 import { lazy, Suspense, useEffect, useState } from 'react';
-import Spot from '@components/Spot/Spot';
-import LogoAnimation from '@components/LogoAnimation/LogoAnimation';
+import Spot from './components/ui/Spot/Spot';
+import LogoAnimation from './components/ui/LogoAnimation/LogoAnimation';
 
-const LazyHeader = lazy(() => import('@components/Header/Header'));
-const LazyMainInfo = lazy(() => import('@components/MainInfo/MainInfo'));
+const LazyHeader = lazy(() => import('./components/layout/Header/Header'));
+const LazyMainInfo = lazy(() => import('./components/Pages/MainPage/MainPage'));
 
 function App() {
 	const [isAnimationComplete, setIsAnimationComplete] = useState<boolean>(

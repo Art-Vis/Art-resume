@@ -1,17 +1,17 @@
 import './Header.scss';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { closeMenu } from '../../store/slices/menuSlices';
-import SwitchTheme from '../SwitchTheme/SwitchTheme';
+import { closeMenu } from '../../../store/slices/menuSlices';
+import SwitchTheme from '../../ui/SwitchTheme/SwitchTheme';
 import { FC } from 'react';
-import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
-import { useAnimationHeader } from '../../hooks/useAnimationHeader';
+import { BurgerMenu } from '../../ui/BurgerMenu/BurgerMenu';
+import { useAnimationHeader } from '@hooks/useAnimationHeader';
 
-interface HeaderPageProps {
+interface HeaderProps {
 	onAnimationComplete?: () => void;
 }
 
-const HeaderPage: FC<HeaderPageProps> = ({ onAnimationComplete }) => {
+const Header: FC<HeaderProps> = ({ onAnimationComplete }) => {
 	const dispatch = useDispatch();
 
 	const updateCloseMenu = () => {
@@ -48,4 +48,4 @@ const HeaderPage: FC<HeaderPageProps> = ({ onAnimationComplete }) => {
 	);
 };
 
-export default HeaderPage;
+export default Header;

@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import './Profile.scss';
 import { USER } from '@data/user';
-import img from '@assets/im.jpg';
-import { useAnimationProfile } from '../../../hooks/useAnimationProfile';
+import img from '@images/im.jpg';
+import { useAnimationProfile } from '@hooks/useAnimationProfile';
 import ProfileCard from './ProfileCard/ProfileCard';
 import Info from './Info/Info';
 

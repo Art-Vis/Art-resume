@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import AppRoutes from '../AppRoutes/AppRoutes';
+import AppRoutes from '../../routes/AppRoutes/AppRoutes';
 
 const MainPage: FC = () => {
 	return (

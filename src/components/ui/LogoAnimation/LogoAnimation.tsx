@@ -1,8 +1,8 @@
 import { FC, useEffect, useState } from 'react';
 import './LogoAnimation.scss';
-import logoLeft from '../../assets/logo-left.png';
-import logoRight from '../../assets/logo-right.png';
-import { useAnimationLogo } from '../../hooks/useAnimationLogo';
+import logoLeft from '@images/logo-left.png';
+import logoRight from '@images/logo-right.png';
+import { useAnimationLogo } from '../../../hooks/useAnimationLogo';
 
 interface LogoAnimationProps {
 	onComplete?: () => void;

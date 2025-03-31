@@ -1,14 +1,14 @@
 import { IUser } from './interface';
 import { FaHtml5, FaCss3, FaJs, FaReact, FaGit, FaCode } from 'react-icons/fa';
-import pomodoro from '@assets/pomodoro1-n.png';
-import converter from '@assets/converter1-n.png';
-import scroll from '@assets/3d-scroll-n.png';
-import calculator from '@assets/calculator1-n.png';
-import certificateGreenApi from '@assets/greenApi.jpg';
-import certificateReact from '@assets/React.png';
-import certificateJs from '@assets/JS.jpg';
-import certificateHtml from '@assets/html.jpg';
-import certificateFrontend from '@assets/Front.jpg';
+import pomodoro from '@images/pomodoro1-n.png';
+import converter from '@images/converter1-n.png';
+import scroll from '@images/3d-scroll-n.png';
+import calculator from '@images/calculator1-n.png';
+import certificateGreenApi from '@images/greenApi.jpg';
+import certificateReact from '@images/React.png';
+import certificateJs from '@images/JS.jpg';
+import certificateHtml from '@images/html.jpg';
+import certificateFrontend from '@images/Front.jpg';
 import { SiGreensock, SiJest, SiTypescript, SiWebpack } from 'react-icons/si';
 import { TbApi, TbBrandVite } from 'react-icons/tb';
 

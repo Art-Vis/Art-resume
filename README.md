@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# Art-resume
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Art-resume** — это онлайн-портфолио, разработанное с использованием React, Vite и SCSS. Этот проект позволяет хранить информацию о различных проектах, их описаниях, а также предоставляет возможность автоматически минимизировать изображения перед размещением их на сервере.
 
-Currently, two official plugins are available:
+## Особенности
+- Структура проекта построена на **React** с использованием **Vite** для более быстрой сборки.
+- Изображения минимизируются при сборке проекта с помощью **Vite**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Структура проекта
 
-## Expanding the ESLint configuration
+Проект разделён на несколько ключевых частей:
+1. **components/** — компонентная структура приложения.
+2. **pages/** — страницы приложения, такие как главная страница, страница с тестами и т.д.
+3. **store/** — состояние приложения, управление состоянием с использованием **Redux**.
+4. **assets/** — директория для хранения изображений, которые автоматически минимизируются при сборке проекта.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Технологии
+- **React** — библиотека для построения пользовательских интерфейсов.
+- **Vite** — сборщик проекта для быстрой разработки и сборки.
+- **Redux** — для управления состоянием приложения.
+- **SCSS** — для стилизации.
+- **React Router** — для маршрутизации в приложении.

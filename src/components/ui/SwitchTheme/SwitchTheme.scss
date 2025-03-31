@@ -31,7 +31,11 @@ body:not(.white) .sun svg {
 		gap: 3px;
 	}
 
-	& .icon svg {
+	& .icon {
+		cursor: pointer;
+	}
+
+	svg {
 		display: block;
 		width: 25px;
 		height: 25px;
